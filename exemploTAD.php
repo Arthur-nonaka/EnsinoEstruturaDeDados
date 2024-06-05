@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W4School - TAD</title>
+    <title>W4School - TAD Exeemplo</title>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"> -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -38,7 +38,7 @@ if (!isset($_SESSION['user'])) {
         <section class="section">
             <h1 class="title has-text-info"> TAD </h1>
             <h2 class="subtitle has-text-black-bis"> Tipo Abstrato de Dado </h2>
-            <section class="content" style="max-width: 100vw;">
+            <section class="content" style="max-width: 60vw;">
                 <p class="has-text-justified">
                     É um código que define e implementa um novo tipo de informação ou um novo tipo de objeto utilizado
                     na linguagem de programação orientada a objetos. É importante notar que qualquer processamento
@@ -58,9 +58,10 @@ if (!isset($_SESSION['user'])) {
                 </p>
             </section>
         </section>
-        <section class="section is-flex is-justify-content-end">
+        <section class="section is-flex is-justify-content-space-between">
 
-            <a class="is-size-5 has-text-link proximo" href="struct.php"> Proximo </a>
+            <a class="is-size-5 has-text-link anterior" href="struct.php"> Anterior </a>
+            <a class="is-size-5 has-text-link proximo" href="#"> Proximo </a>
 
         </section>
     </main>
