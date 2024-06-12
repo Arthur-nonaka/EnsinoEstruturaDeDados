@@ -60,24 +60,26 @@ if (!isset($_SESSION['user'])) {
 
             </section>
             <section class="mt-2 is-flex is-justify-content-center">
-                <pre style="min-width: 50vw; height: 40vh;">
+    <pre style="min-width: 50vw; height: 40vh;">
+        <?php
+        $codigo = <<<EOD
 public struct Ponto
 {
     public int X { get; set; }
     public int Y { get; set; }
-    
+
     public Ponto(int x, int y)
     {
         X = x;
         Y = y;
     }
-    
+
     public void Imprimir()
     {
         Console.WriteLine($"Ponto: ({X}, {Y})");
     }
 }
-    
+
 class Program
 {
     static void Main(string[] args)
@@ -86,8 +88,15 @@ class Program
         p.Imprimir();  // Saída: Ponto: (10, 20)
     }
 }
+EOD;
+
+        $linhas = explode("\n", $codigo);
+        foreach ($linhas as $linha) {
+            echo "<span>$linha</span>\n";
+        }
+        ?>
     </pre>
-            </section>
+</section>
         </section>
         <section class="section is-flex is-justify-content-space-between">
 
@@ -97,10 +106,24 @@ class Program
         </section>
     </main>
 
-    <footer>
+    <footer class="p-2 has-background-link-light">
+        <section class="m-2 p-2">
+            <section>
+                <h3 class="subtitle is-size-5">
+                    Desenvolvdores:
+                </h3>
+                <section class="is-flex is-flex-direction-column">
+                    <p>Arthur Nonaka Oda</p>
+                    <p>Joao Luiz Souza Pereira</p>
+                    <p>Gustavo Henrique Bispo Costa</p>
+                    <p>Joao Pedro de Souza Cisilo </p>
+                </section>
+            </section>
+        </section>
         <div class="content has-text-centered">
             <p>W4School - 2024</p>
-        </div>
+    </div>
+    </footer>
 </body>
 
 </html>

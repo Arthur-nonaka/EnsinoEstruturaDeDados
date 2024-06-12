@@ -2,11 +2,13 @@
 
 * {
   margin: 0;
-  box-sizing: border-box; /* Garante que as bordas e o preenchimento não aumentem o tamanho do elemento */
+  padding: 0;
+  /* box-sizing: border-box; */
 }
 body {
   /* background-color: rgb(255, 255, 255); */
-  overflow: hidden !important; 
+  /* overflow: hidden !important;  */
+  height: 100vh;
 }
 
 .corpo {
@@ -169,4 +171,26 @@ pre {
   padding: 1em 1.5em;
   display: block;
   word-wrap: break-word;
+}
+
+footer {
+  height: 30vh;
+  bottom: 0;
+}
+
+pre span {
+  display: block;
+    line-height: 0rem;
+    counter-increment: line;
+}
+pre span:before {
+      
+      content: counter(line);
+      display: inline-block;
+      border-right: 1px solid #ddd;
+      padding: 0 .5em;
+      /* height: 3rem; */
+      margin-right: .5em;
+      color: #888
+
 }

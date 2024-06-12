@@ -39,22 +39,28 @@ if (!isset($_SESSION['user'])) {
             <h1 class="title has-text-info"> TAD </h1>
             <h2 class="subtitle has-text-black-bis"> Tipo Abstrato de Dado </h2>
             <section class="content" style="max-width: 100vw;">
-                <p class="has-text-justified">
-                    É um código que define e implementa um novo tipo de informação ou um novo tipo de objeto utilizado
-                    na linguagem de programação orientada a objetos. É importante notar que qualquer processamento
-                    realizado só deve atuar sobre os dados encapsulados em um TAD.
+            <p class="has-text-justified">
+                Um Tipo Abstrato de Dados (TAD) é um conceito na programação que permite definir e implementar novos tipos de dados, bem como as operações que podem ser realizadas nesses dados. Ele é uma abstração que encapsula os dados e as operações em uma única unidade.
+
                 </p>
                 <p class="has-text-justified">
-                    Um TAD possui duas partes principais:
+                Vamos entender cada parte de um TAD:
+
                 <ol>
                     <li>
-                        Dados armazenados: Estes podem ser armazenados em variáveis, vetores, ponteiros, etc.
+                    Dados Armazenados: Esta parte define os tipos de dados que serão armazenados e manipulados pelo TAD. Isso pode incluir variáveis, vetores, estruturas, ou qualquer outra forma de armazenamento de dados. Por exemplo, em um TAD para representar uma lista encadeada, os dados armazenados podem ser os nós da lista.
                     </li>
                     <li>
-                        Funções que manipulam os dados: Estas implementam procedimentos por meio de subprogramas
-                        denominados operações, métodos ou serviços.
+                    Funções que Manipulam os Dados: Esta parte consiste nas operações que podem ser realizadas nos dados armazenados. Essas operações são implementadas como funções, métodos ou procedimentos que atuam nos dados do TAD. Por exemplo, para uma lista encadeada, as operações podem incluir inserção de um novo elemento, remoção de um elemento existente, e assim por diante.
                     </li>
                 </ol>
+                </p>
+                <p class="has-text-justified">
+                A ideia fundamental por trás de um TAD é a encapsulação. Isso significa que os detalhes internos de como os dados são armazenados e manipulados são ocultos do usuário do TAD. O usuário só pode interagir com os dados por meio das operações definidas no TAD.
+
+            </p>
+            <p class="has-text-justified">
+                    Por exemplo, considere um TAD para uma pilha. O usuário pode empilhar um novo elemento, desempilhar um elemento existente ou verificar se a pilha está vazia. No entanto, o usuário não precisa saber como os elementos são armazenados na pilha ou como as operações são implementadas internamente. Esses detalhes são encapsulados dentro do TAD.
                 </p>
             </section>
         </section>
@@ -65,10 +71,24 @@ if (!isset($_SESSION['user'])) {
         </section>
     </main>
 
-    <footer>
+    <footer class="p-2 has-background-link-light">
+        <section class="m-2 p-2">
+            <section>
+                <h3 class="subtitle is-size-5">
+                    Desenvolvdores:
+                </h3>
+                <section class="is-flex is-flex-direction-column">
+                    <p>Arthur Nonaka Oda</p>
+                    <p>Joao Luiz Souza Pereira</p>
+                    <p>Gustavo Henrique Bispo Costa</p>
+                    <p>Joao Pedro de Souza Cisilo </p>
+                </section>
+            </section>
+        </section>
         <div class="content has-text-centered">
             <p>W4School - 2024</p>
-        </div>
+    </div>
+    </footer>
 </body>
 
 </html>
