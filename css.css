@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .header {
@@ -69,7 +69,7 @@ body {
     margin-top: 2rem;
 }
 
-.button.is-primary {
+.button is-info {
     margin-bottom: 1rem;
     position: relative;
     z-index: 3; 
