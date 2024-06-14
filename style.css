@@ -5,85 +5,28 @@
   padding: 0;
   /* box-sizing: border-box; */
 }
+
 body {
-  /* background-color: rgb(255, 255, 255); */
-  /* overflow: hidden !important;  */
   height: 100vh;
+  background: linear-gradient(
+    135deg, 
+    rgb(255, 255, 255),  /* Cor branca */
+    hsla(217, 71%, 53%, 0.233), /* Cor azul clara com transparência */
+    #38d8ff, /* Cor azul */
+    #000 /* Cor preta */
+  );
 }
 
-.corpo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url("img/fundo.gif");
-  width: 100%;
-  height: 500px;
-}
-
-.login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 10%;
-  width: 40vw;
-  height: 80vh;
-  background-color: rgb(0, 0, 0);
-  border-radius: 10px;
-  filter: alpha(opacity=50);
-  opacity: 0.75;
-  -moz-opacity: 0.75;
-  -webkit-opacity: 0.75;
-}
-
-.login input {
-  margin-bottom: 20px; /* Reduzindo a margem inferior */
-  padding: 10px;
-  width: 80%; /* Define a largura dos inputs */
-  background-color: rgb(255, 255, 255);
-  font-family: Arial, Helvetica, sans-serif;
-  color: #000;
-  border-radius: 5px;
-  border: none; /* Removendo a borda padrão */
-}
-
-.login .botao {
-  background-color: rgb(255, 255, 255);
-  color: #000;
-  border-radius: 5px;
-  width: 100px;
-}
-
-.login .botao:hover {
-  background-color: #38d8ff;
-  color: rgb(255, 255, 255);
-}
-
-.nome {
-  margin-bottom: 20px; /* Reduzindo a margem inferior */
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(255, 255, 255);
-}
-.link {
-  display: block; /* Altera o comportamento para ocupar a largura total do contêiner */
-  margin-top: 10px; /* Adiciona uma margem superior para separar do botão */
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(255, 255, 255);
-  text-decoration: none; /* Remove a decoração padrão do link */
-}
-.link:hover {
-  color: #38d8ff; /* Altera a cor ao passar o mouse sobre o link */
-}
 
 .proximo {
   position: relative;
-  padding: 10px;
+  padding: 1vh;
 }
+
 .proximo:hover {
   cursor: pointer;
-  /* background-color: #38d7ff0a; */
 }
+
 .proximo::after {
   display: block;
   position: absolute;
@@ -97,33 +40,28 @@ body {
   justify-content: end;
   content: ">";
   width: 120%;
-  padding: 10px;
+  padding: 1vh;
   transform: translate(10%);
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 0 1vw 1vw 0;
   top: 0;
   left: -20%;
   transition: all 0.5s ease;
 }
+
 .proximo:hover::after {
-  display: block;
-  position: absolute;
-  display: flex;
-  justify-content: end;
-  /* background: linear-gradient(to left, hsla(217, 71%, 53%, 0.39), rgba(255, 255, 255, 0)); */
   opacity: 1;
-  padding: 10px;
-  content: ">";
   transform: translate(30%);
 }
 
 .anterior {
   position: relative;
-  padding: 10px;
+  padding: 1vh;
 }
+
 .anterior:hover {
   cursor: pointer;
-  /* background-color: #38d7ff0a; */
 }
+
 .anterior::after {
   display: block;
   position: absolute;
@@ -137,22 +75,16 @@ body {
   justify-content: start;
   content: "<";
   width: 120%;
-  padding: 10px;
+  padding: 1vh;
   transform: translate(-10%);
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 1vw 0 0 1vw;
   top: 0;
   right: -20%;
   transition: all 0.5s ease;
 }
+
 .anterior:hover::after {
-  display: block;
-  position: absolute;
-  display: flex;
-  justify-content: start;
-  /* background: linear-gradient(to left, hsla(217, 71%, 53%, 0.39), rgba(255, 255, 255, 0)); */
   opacity: 1;
-  padding: 10px;
-  content: "<";
   transform: translate(-30%);
 }
 
@@ -163,7 +95,7 @@ pre {
   color: #666;
   page-break-inside: avoid;
   font-family: monospace;
-  font-size: 15px;
+  font-size: 1.5vh;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
@@ -180,17 +112,15 @@ footer {
 
 pre span {
   display: block;
-    line-height: 0rem;
-    counter-increment: line;
+  line-height: 0rem;
+  counter-increment: line;
 }
-pre span:before {
-      
-      content: counter(line);
-      display: inline-block;
-      border-right: 1px solid #ddd;
-      padding: 0 .5em;
-      /* height: 3rem; */
-      margin-right: .5em;
-      color: #888
 
+pre span:before {
+  content: counter(line);
+  display: inline-block;
+  border-right: 1px solid #ddd;
+  padding: 0 .5em;
+  margin-right: .5em;
+  color: #888
 }

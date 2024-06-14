@@ -1,0 +1,112 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(
+    135deg, 
+    rgb(255, 255, 255),  /* Cor branca */
+    hsla(217, 71%, 53%, 0.233), /* Cor azul clara com transparência */
+    #38d8ff, /* Cor azul */
+    #000 /* Cor preta */
+  );
+}
+
+.corpo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 40vw;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+  border-color: #38d8ff;
+  box-shadow: 0 0 8px rgba(56, 216, 255, 0.6);
+  outline: none;
+}
+
+.login input {
+  margin-bottom: 2vh;
+  padding: 1vh;
+  width: 80%; /* Define a largura dos inputs */
+  background-color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  border-radius: 0.5vw;
+  border: none; /* Removendo a borda padrão */
+}
+
+.login .botao {
+  background-color: #38d8ff;
+  color: #fff;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+
+.login .botao:hover {
+  background-color: #31b8d1;
+}
+
+.nome {
+    margin-bottom: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+  }
+
+  .link {
+    display: block;
+    margin-top: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #38d8ff;
+  }
