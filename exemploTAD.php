@@ -156,7 +156,7 @@ EOD;
         <section class="section is-flex is-justify-content-space-between">
 
             <a class="is-size-5 has-text-link anterior" href="struct.php"> Anterior </a>
-            <a class="is-size-5 has-text-link proximo" href="#"> Proximo </a>
+            <a class="is-size-5 has-text-link proximo" href="listaEncadeada.php"> Proximo </a>
 
         </section>
     </main>
