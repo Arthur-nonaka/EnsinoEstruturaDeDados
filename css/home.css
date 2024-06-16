@@ -1,9 +1,10 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
+
 body {
     display: flex;
     flex-direction: column;
     height: 100vh;
     margin: 0;
-    overflow: auto;
 }
 
 .header {
@@ -26,6 +27,12 @@ body {
 
 .header .logo img {
     height: 70px;
+}
+
+.navbar {
+    position: fixed;
+    width: 100vw;
+    top: 0;
 }
 
 .sidebar {
@@ -76,3 +83,12 @@ body {
     color: #66D1FF;
     background-color: #66D1FF;
 }
+
+a {
+    text-decoration: none;
+    i {
+      color: #000;
+    
+    }
+  }
+

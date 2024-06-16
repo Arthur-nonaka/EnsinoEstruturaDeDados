@@ -12,14 +12,22 @@ if (!isset($_SESSION['user'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W4School - TAD Exemplo</title>
+    <title>W4Schools - TAD Exemplo</title>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <header class="navbar">
+    <header class="navbar" style="position: fixed; width: 100vw;">
+        <section class="navbar-start ">
+            <button id="sidebarToggle" class="button is-info m-3">Menu</button>
+            <a class="logo" href="home.php">
+                <figure class="image is-64x64">
+                    <img src="./img/logo.png" />
+                </figure>
+            </a>
+        </section>
         <section class="navbar-end">
             <section class="navbar-item">
                 <?php
@@ -35,11 +43,23 @@ if (!isset($_SESSION['user'])) {
             </section>
         </section>
     </header>
+
+    <div id="sidebar" class="sidebar has-background-black-bis">
+    <div class="sidebar-menu">
+            <a href="home.php" class="sidebar-item">Página Principal</a>
+            <a href="TAD.php" class="sidebar-item">TAD</a>
+            <a href="interface.php" class="sidebar-subitem">Interface</a>
+            <a href="struct.php" class="sidebar-subitem">Struct</a>
+            <a href="exemploTAD.php" class="sidebar-subitem">Exemplo</a>
+            <a href="lista.php" class="sidebar-item">Lista</a>
+        </div>
+    </div>
+
     <main class="has-background-white-bis has-text-black-bis">
-        <section class="section">
+        <section  id="content" class="content">
             <h1 class="title has-text-info"> TAD </h1>
-            <h2 class="subtitle has-text-black-bis"> Exemplo</h2>
-            <section class="content" style="max-width: 100vw;">
+            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Exemplo</h2>
+            <section class="content p-0" style="max-width: 100vw;">
                 <p class="has-text-justified">
                     Vamos fazer uma TAD de um estudante. Primeiro vamos criar uma struct.
                 </p>
@@ -120,12 +140,15 @@ EOD;
                         Criamos um método para exibir as informações do estudante e outro para verificar se o estudante
                         reprovou por faltas.
                     </p>
-                    
-                    
+
+
                 </section>
                 <section class="is-flex is-justify-content-center m-5">
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/akY3Gk86M5w?si=9E7e0e33olffHSyz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/akY3Gk86M5w?si=9E7e0e33olffHSyz"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </section>
 
             </section>
@@ -157,10 +180,11 @@ EOD;
                 </section>
             </section>
         </section>
-        <div class="content has-text-centered">
-            <p>W4School - 2024</p>
+        <div class="content p-0 has-text-centered">
+            <p>W4Schools - 2024</p>
         </div>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

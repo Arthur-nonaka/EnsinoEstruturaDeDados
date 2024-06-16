@@ -7,8 +7,8 @@ session_start();
 
 <head>
     <meta charset="UTF-8">
-    <title>W4School - Login</title>
-    <link rel="stylesheet" href="index.css">
+    <title>W4Schools - Login</title>
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body class="corpo">
@@ -29,6 +29,7 @@ session_start();
             <a href="cadastro.php" class="link">Criar Conta</a>
         </form>
     </section>
+
 </body>
 
 </html>

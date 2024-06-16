@@ -11,7 +11,7 @@ if (isset($_POST['nome']) && isset($_POST['senha']) && isset($_POST['email']) &&
     $res = mysqli_query($conexao, $sql);
     if ($res) {
         $_SESSION['user'] = $name;
-        header("Location: ../TAD.php");
+        header("Location: ../home.php");
         die();
     } else {
         $_SESSION['res'] = "Erro";

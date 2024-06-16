@@ -13,7 +13,7 @@ if ($_POST['email'] != "" && $_POST['senha'] != "") {
         if ($res->num_rows > 0) {
             $row = mysqli_fetch_assoc($res);
             $_SESSION['user'] = $row['name'];
-            header("Location: ../TAD.php");
+            header("Location: ../home.php");
             die();
         } else {
             $_SESSION['res'] = "Senha invalida";

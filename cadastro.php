@@ -7,8 +7,8 @@ session_start();
 
 <head>
     <meta charset="UTF-8">
-    <title>W4School - Cadastrar</title>
-    <link rel="stylesheet" href="index.css">
+    <title>W4Schools - Cadastrar</title>
+    <link rel="stylesheet" href="./css/index.css">
 
 </head>
 
