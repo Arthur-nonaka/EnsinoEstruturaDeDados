@@ -15,6 +15,7 @@ if (!isset($_SESSION['user'])) {
     <title>W4School - TAD</title>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"> -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -66,22 +67,22 @@ if (!isset($_SESSION['user'])) {
         </section>
         <section class="section is-flex is-justify-content-end">
 
-            <a class="is-size-5 has-text-link proximo" href="struct.php"> Proximo </a>
+            <a class="is-size-5 has-text-link proximo" href="interface.php"> Proximo </a>
 
         </section>
     </main>
 
-    <footer class="p-2 has-background-link-light">
+    <footer class="p-2 has-background-link-light has-text-black is-flex is-flex-direction-column is-justify-content-space-between">
         <section class="m-2 p-2">
             <section>
-                <h3 class="subtitle is-size-5">
+                <h3 class="subtitle is-size-5 has-text-black">
                     Desenvolvdores:
                 </h3>
                 <section class="is-flex is-flex-direction-column">
-                    <p>Arthur Nonaka Oda</p>
-                    <p>Joao Luiz Souza Pereira</p>
-                    <p>Gustavo Henrique Bispo Costa</p>
-                    <p>Joao Pedro de Souza Cisilo </p>
+                    <p>Arthur Nonaka Oda <a href="https://github.com/Arthur-nonaka" target="_blank"><i class="fa fa-github"></i></a> </p> 
+                    <p>Joao Luiz Souza Pereira <a href="https://github.com/joaoluiz00" target="_blank"><i class="fa fa-github"></i></a></p>
+                    <p>Gustavo Henrique Bispo Costa <a href="https://github.com/GuGuzin14" target="_blank"><i class="fa fa-github"></i></a></p>
+                    <p>Joao Pedro de Souza Cisilo <a href="https://github.com/JoaoPCisilo" target="_blank"><i class="fa fa-github"></i></a> </p>
                 </section>
             </section>
         </section>

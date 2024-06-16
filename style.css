@@ -17,6 +17,14 @@ body {
   );
 }
 
+a {
+  text-decoration: none;
+  i {
+    color: #000;
+  
+  }
+}
+
 
 .proximo {
   position: relative;
