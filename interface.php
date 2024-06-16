@@ -12,7 +12,7 @@ if (!isset($_SESSION['user'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W4School - TAD</title>
+    <title>W4School - Interface</title>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -73,7 +73,7 @@ if (!isset($_SESSION['user'])) {
         </section>
         <section class="section is-flex is-justify-content-space-between">
             <a class="is-size-5 has-text-link anterior" href="TAD.php"> Anterior </a>
-            <a class="is-size-5 has-text-link proximo" href="exemploTAD.php"> Proximo </a>
+            <a class="is-size-5 has-text-link proximo" href="struct.php"> Proximo </a>
 
         </section>
     </main>

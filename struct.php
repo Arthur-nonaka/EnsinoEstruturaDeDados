@@ -101,7 +101,7 @@ EOD;
         </section>
         <section class="section is-flex is-justify-content-space-between">
 
-            <a class="is-size-5 has-text-link anterior" href="TAD.php"> Anterior </a>
+            <a class="is-size-5 has-text-link anterior" href="interface.php"> Anterior </a>
             <a class="is-size-5 has-text-link proximo" href="exemploTAD.php"> Proximo </a>
 
         </section>
