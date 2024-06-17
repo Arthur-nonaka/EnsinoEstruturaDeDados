@@ -57,35 +57,36 @@ if (!isset($_SESSION['user'])) {
 
     <main class="has-background-white-bis has-text-black-bis">
         <section  id="content" class="content">
-            <h1 class="title has-text-info"> Listas Encadeada </h1>
+            <h1 class="title has-text-info"> Listas Duplamente Encadeada </h1>
             <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> </h2>
             <section class="content p-0" style="max-width: 100vw;">
 
-    <p class="has-text-justified"> Uma lista encadeada é uma representação de uma sequência de objetos, todos do mesmo tipo, na memória RAM (= random access memory) do computador. Cada elemento da sequência é armazenado em uma célula da lista: o primeiro elemento na primeira célula, o segundo na segunda, e assim por diante. </p> 
-    <p class="has-text-justified"> Estrutura de uma lista Simplesmente encadeada 
-    <li>Definição de Nó</li>
+    <p class="has-text-justified"> Estrutura de uma lista Duplamente encadeada 
+    <li>Cada nó em uma lista duplamente encadeada possui três componentes:</li>
     <ol> 
-    <li> Dado: O valor armazenado no nó. </li> 
-    <li> Ponteiro: Um ponteiro para o próximo nó na lista. </li>
+    <li> Ponteiro para o Próximo Nó (Next): Aponta para o próximo nó na lista. </li> 
+    <li> Ponteiro para o Nó Anterior (Previous): Aponta para o nó anterior na lista. </li>
     </ol>
     <pre style="min-width: 30vw; height: 35vh;"> 
-        <span>public class No</span> 
-        <span>{</span> 
-        <span>    public int Data { get; set; }</span> 
-        <span>    public No Next { get; set; }</span> 
-        <span></span> 
-        <span>    public No(int data)</span> 
-        <span>    {</span> 
-        <span>        Data = data;</span> 
-        <span>        Next = null;</span> 
-        <span>    }</span> 
-        <span>}</span> 
-    </pre> 
+    <span>public class No</span>
+<span>{</span>
+<span>    public int Dado { get; set; }</span>
+<span>    public No Anterior { get; set; }</span>
+<span>    public No Proximo { get; set; }</span>
+<span></span>
+<span>    public No(int dado)</span>
+<span>    {</span>
+<span>        Dado = dado;</span>
+<span>        Anterior = null;</span>
+<span>        Proximo = null;</span>
+<span>    }</span>
+<span>}</span>
+
     </section> 
     <h2 class="subtitle has-text-black-bis"> Vamos as operações: </h2> 
     <section class="section is-flex is-justify-content-space-between"> 
-    <a class="is-size-5 has-text-link anterior" href="exemploTAD.php"> Anterior </a> 
-    <a class="is-size-5 has-text-link proximo" href="operacoesEncadeadas.php"> Proximo </a> 
+    <a class="is-size-5 has-text-link anterior" href="exemploListaEncadeada.php"> Anterior </a> 
+    <a class="is-size-5 has-text-link proximo" href="operacoesDuplamenteEncadeadas.php"> Proximo </a> 
 </section>
  </main>
 

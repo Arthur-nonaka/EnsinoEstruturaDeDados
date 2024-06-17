@@ -12,14 +12,14 @@ if (!isset($_SESSION['user'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W4Schools - Estrutura</title>
+    <title>W4Schools - TAD Exemplo</title>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"> -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-<header class="navbar" style="position: fixed; width: 100vw;">
+    <header class="navbar" style="position: fixed; width: 100vw;">
         <section class="navbar-start ">
             <button id="sidebarToggle" class="button is-info m-3">Menu</button>
             <a class="logo" href="home.php">
@@ -55,12 +55,10 @@ if (!isset($_SESSION['user'])) {
         </div>
     </div>
 
-    <main class="has-background-white-bis has-text-black-bis">
-        <section  id="content" class="content">
-            <h1 class="title has-text-info"> Listas Encadeada </h1>
-            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> </h2>
-            <section class="content p-0" style="max-width: 100vw;">
-
+    <main class="has-background-white-bis has-text-black-bis"> 
+    <section class="section"> <h1 class="title has-text-info"> Listas encadeadas </h1>
+    <h2 class="subtitle has-text-black-bis"> </h2> 
+    <section class="content" style="max-width: 100vw;"> 
     <p class="has-text-justified"> Uma lista encadeada é uma representação de uma sequência de objetos, todos do mesmo tipo, na memória RAM (= random access memory) do computador. Cada elemento da sequência é armazenado em uma célula da lista: o primeiro elemento na primeira célula, o segundo na segunda, e assim por diante. </p> 
     <p class="has-text-justified"> Estrutura de uma lista Simplesmente encadeada 
     <li>Definição de Nó</li>
@@ -85,10 +83,10 @@ if (!isset($_SESSION['user'])) {
     <h2 class="subtitle has-text-black-bis"> Vamos as operações: </h2> 
     <section class="section is-flex is-justify-content-space-between"> 
     <a class="is-size-5 has-text-link anterior" href="exemploTAD.php"> Anterior </a> 
-    <a class="is-size-5 has-text-link proximo" href="operacoesEncadeadas.php"> Proximo </a> 
+    <a class="is-size-5 has-text-link proximo" href="operacoes.php"> Proximo </a> 
 </section>
  </main>
-
+        </section>
     <footer
         class="p-2 has-background-link-light has-text-black is-flex is-flex-direction-column is-justify-content-space-between">
         <section class="m-2 p-2">

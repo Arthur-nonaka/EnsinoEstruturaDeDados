@@ -61,43 +61,50 @@ if (!isset($_SESSION['user'])) {
             <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"></h2>
             <section class="content p-0" style="max-width: 100vw;">
             <p class="has-text-justified">
-            Aqui está um exemplo de como usar a lista simplesmente encadeada em um programa:
+            Aqui está um exemplo de como usar a lista Duplamente encadeada em um programa:
                     <pre style="min-width: 25vw; height: 30vw;">
-                    <span>using System;</span>
-            <span></span>
-            <span>class Program</span>
-            <span>{</span>
-            <span>    static void Main(string[] args)</span>
-            <span>    {</span>
-            <span>        listaEncadeada lista = new listaEncadeada();</span>
-            <span></span>
-            <span>        // Inserir no início</span>
-            <span>        list.InserirInicio(1);</span>
-            <span>        lista.InserirInicio(2);</span>
-            <span>        lista.InserirInicio(3);</span>
-            <span></span>
-            <span>        Console.WriteLine("Lista após inserções no início:");</span>
-            <span>        lista.PrintList();</span>
-            <span></span>
-            <span>        // Inserir no final</span>
-            <span>        lista.InserirFinal(4);</span>
-            <span>         lista.InserirFinal(5);</span>
-            <span></span>
-            <span>        Console.WriteLine("Lista após inserções no final:");</span>
-            <span>        lista.PrintList();</span>
-            <span></span>
-            <span>        // Remover do início</span>
-            <span>        lista.DeletarInicio();</span>
-            <span>        Console.WriteLine("Lista após remoção do início:");</span>
-            <span>        lista.PrintList();</span>
-            <span></span>
-            <span>        // Remover um nó específico</span>
-            <span>        lista.DeletarValor(4);</span>
-            <span>        Console.WriteLine("Lista após remoção do nó com valor 4:");</span>
-            <span>        lista.PrintList();</span>
-            <span>    }</span>
-        <span>}</span>
-
+                    <span>                 using System;</span>
+                    <span>                 </span>
+                    <span>                 class Programa</span>
+                    <span>                 {</span>
+                    <span>                     static void Main(string[] args)</span>
+                    <span>                     {</span>
+                    <span>                         ListaDuplamenteEncadeada lista = new ListaDuplamenteEncadeada();</span>
+                    <span>                 </span>
+                    <span>                         // Inserir elementos no início</span>
+                    <span>                         lista.InserirNoInicio(10);</span>
+                    <span>                         lista.InserirNoInicio(20);</span>
+                    <span>                         lista.InserirNoInicio(30);</span>
+                    <span>                 </span>
+                    <span>                         Console.WriteLine("Lista após inserções no início:");</span>
+                    <span>                         lista.ImprimirFrente();</span>
+                    <span>                 </span>
+                    <span>                         // Inserir elementos no final</span>
+                    <span>                         lista.InserirNoFinal(40);</span>
+                    <span>                         lista.InserirNoFinal(50);</span>
+                    <span>                 </span>
+                    <span>                         Console.WriteLine("Lista após inserções no final:");</span>
+                    <span>                         lista.ImprimirFrente();</span>
+                    <span>                 </span>
+                    <span>                         // Remover elemento do início</span>
+                    <span>                         lista.RemoverDoInicio();</span>
+                    <span>                         Console.WriteLine("Lista após remoção do início:");</span>
+                    <span>                         lista.ImprimirFrente();</span>
+                    <span>                 </span>
+                    <span>                         // Remover elemento do final</span>
+                    <span>                         lista.RemoverDoFinal();</span>
+                    <span>                         Console.WriteLine("Lista após remoção do final:");</span>
+                    <span>                         lista.ImprimirFrente();</span>
+                    <span>                 </span>
+                    <span>                         // Imprimir a lista do início ao fim</span>
+                    <span>                         Console.WriteLine("Lista do início ao fim:");</span>
+                    <span>                         lista.ImprimirFrente();</span>
+                    <span>                 </span>
+                    <span>                         // Imprimir a lista do fim ao início</span>
+                    <span>                         Console.WriteLine("Lista do fim ao início:");</span>
+                    <span>                         lista.ImprimirReverso();</span>
+                    <span>                     }</span>
+                    <span>                 }</span>
 
 
                     </pre>
@@ -105,8 +112,8 @@ if (!isset($_SESSION['user'])) {
         </section>
         <section class="section is-flex is-justify-content-space-between">
 
-            <a class="is-size-5 has-text-link anterior" href="listaEncadeada.php"> Anterior </a>
-            <a class="is-size-5 has-text-link proximo" href="operacoesListaEncadeada.php"> Proximo </a>
+            <a class="is-size-5 has-text-link anterior" href="operacoesDuplamenteEncadeadas.php"> Anterior </a>
+            <a class="is-size-5 has-text-link proximo" href="index.php"> Proximo </a>
 
         </section>
     </main>
