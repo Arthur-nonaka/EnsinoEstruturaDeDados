@@ -45,28 +45,35 @@ if (!isset($_SESSION['user'])) {
     </header>
 
     <div id="sidebar" class="sidebar has-background-black-bis">
-    <div class="sidebar-menu">
+        <div class="sidebar-menu">
             <a href="home.php" class="sidebar-item">Página Principal</a>
             <a href="TAD.php" class="sidebar-item">TAD</a>
             <a href="interface.php" class="sidebar-subitem">Interface</a>
             <a href="struct.php" class="sidebar-subitem">Struct</a>
             <a href="exemploTAD.php" class="sidebar-subitem">Exemplo</a>
-            <a href="lista.php" class="sidebar-item">Lista</a>
+            <a href="listaEncadeada.php" class="sidebar-item">Lista</a>
+            <a href="operacoesEncadeadas.php" class="sidebar-subitem">Operações</a>
+            <a href="exemploListaEncadeada.php" class="sidebar-subitem">Exemplo</a>
+            <a href="listaDuplamenteEncadeada.php" class="sidebar-item">Lista Duplamente Encadeada</a>
+            <a href="exemploListaDuplamenteEncadeada.php" class="sidebar-subitem">Exemplo</a>
         </div>
     </div>
-
-    <main class="has-background-white-bis has-text-black-bis"> 
-    <section class="section"> <h1 class="title has-text-info"> Listas encadeadas </h1>
-    <h2 class="subtitle has-text-black-bis"> </h2> 
-    <section class="content" style="max-width: 100vw;"> 
-    <p class="has-text-justified"> Uma lista encadeada é uma representação de uma sequência de objetos, todos do mesmo tipo, na memória RAM (= random access memory) do computador. Cada elemento da sequência é armazenado em uma célula da lista: o primeiro elemento na primeira célula, o segundo na segunda, e assim por diante. </p> 
-    <p class="has-text-justified"> Estrutura de uma lista Simplesmente encadeada 
-    <li>Definição de Nó</li>
-    <ol> 
-    <li> Dado: O valor armazenado no nó. </li> 
-    <li> Ponteiro: Um ponteiro para o próximo nó na lista. </li>
-    </ol>
-    <pre style="min-width: 30vw; height: 35vh;"> 
+    <main class="has-background-white-bis has-text-black-bis">
+        <section class="section">
+            <h1 class="title has-text-info"> Listas encadeadas </h1>
+            <h2 class="subtitle has-text-black-bis"> </h2>
+            <section class="content" style="max-width: 100vw;">
+                <p class="has-text-justified"> Uma lista encadeada é uma representação de uma sequência de objetos,
+                    todos do mesmo tipo, na memória RAM (= random access memory) do computador. Cada elemento da
+                    sequência é armazenado em uma célula da lista: o primeiro elemento na primeira célula, o segundo na
+                    segunda, e assim por diante. </p>
+                <p class="has-text-justified"> Estrutura de uma lista Simplesmente encadeada
+                    <li>Definição de Nó</li>
+                <ol>
+                    <li> Dado: O valor armazenado no nó. </li>
+                    <li> Ponteiro: Um ponteiro para o próximo nó na lista. </li>
+                </ol>
+                <pre style="min-width: 30vw; height: 35vh;">
         <span>public class No</span> 
         <span>{</span> 
         <span>    public int Data { get; set; }</span> 
@@ -78,15 +85,15 @@ if (!isset($_SESSION['user'])) {
         <span>        Next = null;</span> 
         <span>    }</span> 
         <span>}</span> 
-    </pre> 
-    </section> 
-    <h2 class="subtitle has-text-black-bis"> Vamos as operações: </h2> 
-    <section class="section is-flex is-justify-content-space-between"> 
-    <a class="is-size-5 has-text-link anterior" href="exemploTAD.php"> Anterior </a> 
-    <a class="is-size-5 has-text-link proximo" href="operacoes.php"> Proximo </a> 
-</section>
- </main>
-        </section>
+    </pre>
+            </section>
+            <h2 class="subtitle has-text-black-bis"> Vamos as operações: </h2>
+            <section class="section is-flex is-justify-content-space-between">
+                <a class="is-size-5 has-text-link anterior" href="exemploTAD.php"> Anterior </a>
+                <a class="is-size-5 has-text-link proximo" href="operacoes.php"> Proximo </a>
+            </section>
+    </main>
+    </section>
     <footer
         class="p-2 has-background-link-light has-text-black is-flex is-flex-direction-column is-justify-content-space-between">
         <section class="m-2 p-2">

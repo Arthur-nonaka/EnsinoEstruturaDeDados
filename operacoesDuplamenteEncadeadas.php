@@ -19,10 +19,10 @@ if (!isset($_SESSION['user'])) {
 </head>
 
 <body>
-<header class="navbar">
+    <header class="navbar">
         <section class="navbar-start">
             <button id="sidebarToggle" class="button is-info m-3">
-                <i class="fa fa-bars"></i> 
+                <i class="fa fa-bars"></i>
             </button>
             <a class="logo" href="home.php">
                 <figure class="image is-64x64">
@@ -45,27 +45,31 @@ if (!isset($_SESSION['user'])) {
     </header>
 
     <div id="sidebar" class="sidebar has-background-black-bis">
-    <div class="sidebar-menu">
+        <div class="sidebar-menu">
             <a href="home.php" class="sidebar-item">Página Principal</a>
             <a href="TAD.php" class="sidebar-item">TAD</a>
             <a href="interface.php" class="sidebar-subitem">Interface</a>
             <a href="struct.php" class="sidebar-subitem">Struct</a>
             <a href="exemploTAD.php" class="sidebar-subitem">Exemplo</a>
-            <a href="lista.php" class="sidebar-item">Lista</a>
+            <a href="listaEncadeada.php" class="sidebar-item">Lista</a>
+            <a href="operacoesEncadeadas.php" class="sidebar-subitem">Operações</a>
+            <a href="exemploListaEncadeada.php" class="sidebar-subitem">Exemplo</a>
+            <a href="listaDuplamenteEncadeada.php" class="sidebar-item">Lista Duplamente Encadeada</a>
+            <a href="exemploListaDuplamenteEncadeada.php" class="sidebar-subitem">Exemplo</a>
         </div>
     </div>
 
     <main class="has-background-white-bis has-text-black-bis">
-        <section  id="content" class="content">
+        <section id="content" class="content">
             <h1 class="title has-text-info"> Listas Duplamente Encadeada </h1>
             <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> </h2>
             <section class="content p-0" style="max-width: 100vw;">
 
-            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Inserção no início:</h2>
-            <p class="has-text-justified">
-            <li>Cria um novo nó.</li>
-             <li> Ajusta os ponteiros para inserir o nó no início da lista.</li><br>
-            <pre style="min-width: 30vw; height: 30vh;">
+                <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Inserção no início:</h2>
+                <p class="has-text-justified">
+                    <li>Cria um novo nó.</li>
+                    <li> Ajusta os ponteiros para inserir o nó no início da lista.</li><br>
+                <pre style="min-width: 30vw; height: 30vh;">
             <span>// Inserção no Início</span>
             <span>    public void InserirNoInicio(int dado)</span>
             <span>    {</span>
@@ -85,11 +89,11 @@ if (!isset($_SESSION['user'])) {
             <span>    }</span>
         </pre>
 
-            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Inserção no Final:</h2>
-            <p class="has-text-justified">
-            <li>Cria um novo nó.</li>
-            <li>Ajusta os ponteiros para inserir o nó no final da lista.</li><br>
-            <pre style="min-width: 30vw; height: 30vh;">
+                <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Inserção no Final:</h2>
+                <p class="has-text-justified">
+                    <li>Cria um novo nó.</li>
+                    <li>Ajusta os ponteiros para inserir o nó no final da lista.</li><br>
+                <pre style="min-width: 30vw; height: 30vh;">
             <span>// Inserção no Final</span>
             <span>    public void InserirNoFinal(int dado)</span>
             <span>    {</span>
@@ -109,11 +113,11 @@ if (!isset($_SESSION['user'])) {
         </pre>
 
 
-            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Remoção do Início:</h2>
-            <p class="has-text-justified">
-            <li>Ajusta os ponteiros para remover o nó do início da lista.</li>
-            <li>Atualiza a início da lista.</li><br>
-            <pre style="min-width: 30vw; height: 30vh;">
+                <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Remoção do Início:</h2>
+                <p class="has-text-justified">
+                    <li>Ajusta os ponteiros para remover o nó do início da lista.</li>
+                    <li>Atualiza a início da lista.</li><br>
+                <pre style="min-width: 30vw; height: 30vh;">
             <span>// Remoção no Início</span>
             <span>    public void RemoverDoInicio()</span>
             <span>    {</span>
@@ -136,12 +140,12 @@ if (!isset($_SESSION['user'])) {
 
         </pre>
 
-        
-            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Remoção no Final:</h2>
-            <p class="has-text-justified">
-            <li>Ajusta os ponteiros para remover o nó do final da lista.</li>
-            <li>Atualiza a fim da lista.</li><br>
-            <pre style="min-width: 30vw; height: 30vh;">
+
+                <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Remoção no Final:</h2>
+                <p class="has-text-justified">
+                    <li>Ajusta os ponteiros para remover o nó do final da lista.</li>
+                    <li>Atualiza a fim da lista.</li><br>
+                <pre style="min-width: 30vw; height: 30vh;">
             <span>// Remoção no Final</span>
             <span>    public void RemoverDoFinal()</span>
             <span>        if (fim == null)</span>
@@ -162,13 +166,14 @@ if (!isset($_SESSION['user'])) {
             <span>    } </span>
             <span>   { </span>
         </pre>
-        
-        
-            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Impressão de elementos:</h2>
-            <p class="has-text-justified">
-            <li>Pode ser feita de duas maneiras: do início até o fim (impressão direta) ou do fim até o início (impressão reversa).</li><br>
-            <p>Impressão Direta:</p>
-            <pre style="min-width: 30vw; height: 30vh;">
+
+
+                <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Impressão de elementos:</h2>
+                <p class="has-text-justified">
+                    <li>Pode ser feita de duas maneiras: do início até o fim (impressão direta) ou do fim até o início
+                        (impressão reversa).</li><br>
+                <p>Impressão Direta:</p>
+                <pre style="min-width: 30vw; height: 30vh;">
             <span>    public void ImprimirFrente()</span>
             <span>    {</span>
             <span>        No atual = inicio;</span>
@@ -182,8 +187,8 @@ if (!isset($_SESSION['user'])) {
 
         </pre>
 
-        <p>Impressão Reversa:</p>
-            <pre style="min-width: 30vw; height: 30vh;">
+                <p>Impressão Reversa:</p>
+                <pre style="min-width: 30vw; height: 30vh;">
             <span>    public void ImprimirReverso()</span>
             <span>    {</span>
             <span>        No atual = fim;</span>
@@ -197,7 +202,7 @@ if (!isset($_SESSION['user'])) {
             <span>}</span>         
 
         </pre>
-        
+
 
             </section>
         </section>

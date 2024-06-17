@@ -19,10 +19,10 @@ if (!isset($_SESSION['user'])) {
 </head>
 
 <body>
-<header class="navbar">
+    <header class="navbar">
         <section class="navbar-start">
             <button id="sidebarToggle" class="button is-info m-3">
-                <i class="fa fa-bars"></i> 
+                <i class="fa fa-bars"></i>
             </button>
             <a class="logo" href="home.php">
                 <figure class="image is-64x64">
@@ -45,24 +45,28 @@ if (!isset($_SESSION['user'])) {
     </header>
 
     <div id="sidebar" class="sidebar has-background-black-bis">
-    <div class="sidebar-menu">
+        <div class="sidebar-menu">
             <a href="home.php" class="sidebar-item">Página Principal</a>
             <a href="TAD.php" class="sidebar-item">TAD</a>
             <a href="interface.php" class="sidebar-subitem">Interface</a>
             <a href="struct.php" class="sidebar-subitem">Struct</a>
             <a href="exemploTAD.php" class="sidebar-subitem">Exemplo</a>
-            <a href="lista.php" class="sidebar-item">Lista</a>
+            <a href="listaEncadeada.php" class="sidebar-item">Lista</a>
+            <a href="operacoesEncadeadas.php" class="sidebar-subitem">Operações</a>
+            <a href="exemploListaEncadeada.php" class="sidebar-subitem">Exemplo</a>
+            <a href="listaDuplamenteEncadeada.php" class="sidebar-item">Lista Duplamente Encadeada</a>
+            <a href="exemploListaDuplamenteEncadeada.php" class="sidebar-subitem">Exemplo</a>
         </div>
     </div>
 
     <main class="has-background-white-bis has-text-black-bis">
-        <section  id="content" class="content">
+        <section id="content" class="content">
             <h1 class="title has-text-info"> Exemplo de Uso </h1>
             <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"></h2>
             <section class="content p-0" style="max-width: 100vw;">
-            <p class="has-text-justified">
-            Aqui está um exemplo de como usar a lista Duplamente encadeada em um programa:
-                    <pre style="min-width: 25vw; height: 30vw;">
+                <p class="has-text-justified">
+                    Aqui está um exemplo de como usar a lista Duplamente encadeada em um programa:
+                <pre style="min-width: 25vw; height: 30vw;">
                     <span>                 using System;</span>
                     <span>                 </span>
                     <span>                 class Programa</span>
@@ -108,7 +112,7 @@ if (!isset($_SESSION['user'])) {
 
 
                     </pre>
-                    </section>
+            </section>
         </section>
         <section class="section is-flex is-justify-content-space-between">
 

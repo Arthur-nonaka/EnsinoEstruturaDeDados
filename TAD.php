@@ -19,30 +19,30 @@ if (!isset($_SESSION['user'])) {
 </head>
 
 <body>
-<header class="navbar">
-    <section class="navbar-start">
-        <button id="sidebarToggle" class="button is-info m-3">
-            <i class="fa fa-bars"></i> 
-        </button>
-        <a class="logo" href="home.php">
-            <figure class="image is-64x64">
-                <img src="./img/logo.png" />
-            </figure>
-        </a>
-    </section>
-    <section class="navbar-end">
-        <section class="navbar-item">
-            <?php echo $_SESSION['user']; ?>
+    <header class="navbar">
+        <section class="navbar-start">
+            <button id="sidebarToggle" class="button is-info m-3">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="logo" href="home.php">
+                <figure class="image is-64x64">
+                    <img src="./img/logo.png" />
+                </figure>
+            </a>
         </section>
-        <section class="navbar-item">
-            <form method="POST" action="./funcoes/sair.php">
-                <button type="submit" name="sair" class="button m-2">
-                    Sair
-                </button>
-            </form>
+        <section class="navbar-end">
+            <section class="navbar-item">
+                <?php echo $_SESSION['user']; ?>
+            </section>
+            <section class="navbar-item">
+                <form method="POST" action="./funcoes/sair.php">
+                    <button type="submit" name="sair" class="button m-2">
+                        Sair
+                    </button>
+                </form>
+            </section>
         </section>
-    </section>
-</header>
+    </header>
 
     <div id="sidebar" class="sidebar has-background-black-bis">
         <div class="sidebar-menu">
@@ -51,7 +51,11 @@ if (!isset($_SESSION['user'])) {
             <a href="interface.php" class="sidebar-subitem">Interface</a>
             <a href="struct.php" class="sidebar-subitem">Struct</a>
             <a href="exemploTAD.php" class="sidebar-subitem">Exemplo</a>
-            <a href="lista.php" class="sidebar-item">Lista</a>
+            <a href="listaEncadeada.php" class="sidebar-item">Lista</a>
+            <a href="operacoesEncadeadas.php" class="sidebar-subitem">Operações</a>
+            <a href="exemploListaEncadeada.php" class="sidebar-subitem">Exemplo</a>
+            <a href="listaDuplamenteEncadeada.php" class="sidebar-item">Lista Duplamente Encadeada</a>
+            <a href="exemploListaDuplamenteEncadeada.php" class="sidebar-subitem">Exemplo</a>
         </div>
     </div>
 

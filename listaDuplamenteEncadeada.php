@@ -19,9 +19,11 @@ if (!isset($_SESSION['user'])) {
 </head>
 
 <body>
-<header class="navbar" style="position: fixed; width: 100vw;">
-        <section class="navbar-start ">
-            <button id="sidebarToggle" class="button is-info m-3">Menu</button>
+    <header class="navbar">
+        <section class="navbar-start">
+            <button id="sidebarToggle" class="button is-info m-3">
+                <i class="fa fa-bars"></i>
+            </button>
             <a class="logo" href="home.php">
                 <figure class="image is-64x64">
                     <img src="./img/logo.png" />
@@ -30,9 +32,7 @@ if (!isset($_SESSION['user'])) {
         </section>
         <section class="navbar-end">
             <section class="navbar-item">
-                <?php
-                echo $_SESSION['user'];
-                ?>
+                <?php echo $_SESSION['user']; ?>
             </section>
             <section class="navbar-item">
                 <form method="POST" action="./funcoes/sair.php">
@@ -45,29 +45,33 @@ if (!isset($_SESSION['user'])) {
     </header>
 
     <div id="sidebar" class="sidebar has-background-black-bis">
-    <div class="sidebar-menu">
+        <div class="sidebar-menu">
             <a href="home.php" class="sidebar-item">Página Principal</a>
             <a href="TAD.php" class="sidebar-item">TAD</a>
             <a href="interface.php" class="sidebar-subitem">Interface</a>
             <a href="struct.php" class="sidebar-subitem">Struct</a>
             <a href="exemploTAD.php" class="sidebar-subitem">Exemplo</a>
-            <a href="lista.php" class="sidebar-item">Lista</a>
+            <a href="listaEncadeada.php" class="sidebar-item">Lista</a>
+            <a href="operacoesEncadeadas.php" class="sidebar-subitem">Operações</a>
+            <a href="exemploListaEncadeada.php" class="sidebar-subitem">Exemplo</a>
+            <a href="listaDuplamenteEncadeada.php" class="sidebar-item">Lista Duplamente Encadeada</a>
+            <a href="exemploListaDuplamenteEncadeada.php" class="sidebar-subitem">Exemplo</a>
         </div>
     </div>
 
     <main class="has-background-white-bis has-text-black-bis">
-        <section  id="content" class="content">
+        <section id="content" class="content">
             <h1 class="title has-text-info"> Listas Duplamente Encadeada </h1>
             <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> </h2>
             <section class="content p-0" style="max-width: 100vw;">
 
-    <p class="has-text-justified"> Estrutura de uma lista Duplamente encadeada 
-    <li>Cada nó em uma lista duplamente encadeada possui três componentes:</li>
-    <ol> 
-    <li> Ponteiro para o Próximo Nó (Next): Aponta para o próximo nó na lista. </li> 
-    <li> Ponteiro para o Nó Anterior (Previous): Aponta para o nó anterior na lista. </li>
-    </ol>
-    <pre style="min-width: 30vw; height: 35vh;"> 
+                <p class="has-text-justified"> Estrutura de uma lista Duplamente encadeada
+                    <li>Cada nó em uma lista duplamente encadeada possui três componentes:</li>
+                <ol>
+                    <li> Ponteiro para o Próximo Nó (Next): Aponta para o próximo nó na lista. </li>
+                    <li> Ponteiro para o Nó Anterior (Previous): Aponta para o nó anterior na lista. </li>
+                </ol>
+                <pre style="min-width: 30vw; height: 35vh;">
     <span>public class No</span>
 <span>{</span>
 <span>    public int Dado { get; set; }</span>
