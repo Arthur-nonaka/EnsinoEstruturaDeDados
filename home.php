@@ -14,34 +14,16 @@ if (!isset($_SESSION['user'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W4Schools</title>
     <link rel="stylesheet" href="./css/home.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
-    <!-- <header class="header">
-        <div class="header-container">
-            <button id="sidebarToggle" class="button is-info">Menu</button>
-            <a class="logo" href="#">
-                <img src="./img/logo.png" alt="Logo">
-            </a>
-
-        </div>
-        <section class="navbar-item">
-            </section>
-            <section class="navbar-item">
-                <form method="POST" action="./funcoes/sair.php">
-                    <button type="submit" name="sair" class="button m-2">
-                        Sair
-                    </button>
-                </form>
-            </section>
-    </header> -->
-
     <header class="navbar">
         <section class="navbar-start">
-            <button id="sidebarToggle" class="button is-info m-3">Menu</button>
+            <button id="sidebarToggle" class="button is-info m-3">
+                <i class="fa fa-bars"></i> 
+            </button>
             <a class="logo" href="home.php">
                 <figure class="image is-64x64">
                     <img src="./img/logo.png" />
@@ -50,9 +32,7 @@ if (!isset($_SESSION['user'])) {
         </section>
         <section class="navbar-end">
             <section class="navbar-item">
-                <?php
-                echo $_SESSION['user'];
-                ?>
+                <?php echo $_SESSION['user']; ?>
             </section>
             <section class="navbar-item">
                 <form method="POST" action="./funcoes/sair.php">
@@ -63,21 +43,19 @@ if (!isset($_SESSION['user'])) {
             </section>
         </section>
     </header>
-
-
+   
     <div id="sidebar" class="sidebar has-background-black-bis">
         <div class="sidebar-menu">
             <a href="home.php" class="sidebar-item">Página Principal</a>
             <a href="TAD.php" class="sidebar-item">TAD-Tipo Abstrato de Dados</a>
-            <a href="#estrutura-de-dados" class="sidebar-item">Listas Simplesmente Encadeadas</a>
-            <a href="#estrutura-de-dados" class="sidebar-item">Listas Duplamente Encadeadas</a>
+            <a href="listaEncadeada.php" class="sidebar-item">Listas Simplesmente Encadeadas</a>
+            <a href="listaDuplamenteEncadeada.php" class="sidebar-item">Listas Duplamente Encadeadas</a>
         </div>
     </div>
-
-    <main
-        class="has-background-white-bis is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
-
-        <div id="content" class="content has-text-black-bis">
+    
+    
+    <main id="content" class="has-background-white-bis is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
+        <div class="content has-text-black-bis">
             <section id="bem-vindo" class="section mt-2 pb-2">
                 <div class="container">
                     <h1 class="title has-text-info">Bem-vindo ao W4Schools</h1>
@@ -102,11 +80,9 @@ if (!isset($_SESSION['user'])) {
                     <ul>
                         <li>Arrays: coleções ordenadas de elementos do mesmo tipo, como números ou nomes.</li>
                         <li>Listas ligadas: conjuntos de elementos interligados, onde cada elemento possui um ponteiro
-                            para
-                            o próximo.</li>
+                            para o próximo.</li>
                         <li>Pilhas: estruturas onde o último elemento inserido é o primeiro a ser removido, seguindo a
-                            regra
-                            "LIFO" (Last In, First Out).</li>
+                            regra "LIFO" (Last In, First Out).</li>
                         <li>Filas: estruturas onde o primeiro elemento inserido é o primeiro a ser removido, seguindo a
                             regra "FIFO" (First In, First Out).</li>
                         <li>Árvores: estruturas hierárquicas com um elemento raiz e diversos elementos filhos.</li>
@@ -138,8 +114,7 @@ if (!isset($_SESSION['user'])) {
 
     <script src="scripts.js"></script>
 
-    <footer
-        class="p-2 has-background-link-light has-text-black is-flex is-flex-direction-column is-justify-content-space-between">
+    <footer class="p-2 has-background-link-light has-text-black is-flex is-flex-direction-column is-justify-content-space-between">
         <section class="m-2 p-2">
             <section>
                 <h3 class="subtitle is-size-5 has-text-black">

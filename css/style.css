@@ -184,3 +184,15 @@ pre span:before {
   padding: 2rem;
   padding-top: 5rem;
 } 
+
+.button.is-info,
+.button.is-info:hover {
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    background-color: #66D1FF !important; 
+}
+
+
+

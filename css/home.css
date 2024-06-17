@@ -76,19 +76,19 @@ body {
     margin-top: 2rem;
 }
 
-.button is-info {
+.button.is-info,
+.button.is-info:hover {
     margin-bottom: 1rem;
     position: relative;
     z-index: 3; 
-    color: #66D1FF;
-    background-color: #66D1FF;
+    color: #fff;
+    background-color: #66D1FF !important;
 }
 
 a {
     text-decoration: none;
-    i {
-      color: #000;
-    
-    }
-  }
+}
 
+a i {
+    color: #000;
+}

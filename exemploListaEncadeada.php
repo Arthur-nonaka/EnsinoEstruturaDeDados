@@ -19,9 +19,11 @@ if (!isset($_SESSION['user'])) {
 </head>
 
 <body>
-    <header class="navbar" style="position: fixed; width: 100vw;">
-        <section class="navbar-start ">
-            <button id="sidebarToggle" class="button is-info m-3">Menu</button>
+<header class="navbar">
+        <section class="navbar-start">
+            <button id="sidebarToggle" class="button is-info m-3">
+                <i class="fa fa-bars"></i> 
+            </button>
             <a class="logo" href="home.php">
                 <figure class="image is-64x64">
                     <img src="./img/logo.png" />
@@ -30,9 +32,7 @@ if (!isset($_SESSION['user'])) {
         </section>
         <section class="navbar-end">
             <section class="navbar-item">
-                <?php
-                echo $_SESSION['user'];
-                ?>
+                <?php echo $_SESSION['user']; ?>
             </section>
             <section class="navbar-item">
                 <form method="POST" action="./funcoes/sair.php">
@@ -43,6 +43,7 @@ if (!isset($_SESSION['user'])) {
             </section>
         </section>
     </header>
+   
 
     <div id="sidebar" class="sidebar has-background-black-bis">
     <div class="sidebar-menu">
@@ -106,7 +107,7 @@ if (!isset($_SESSION['user'])) {
         <section class="section is-flex is-justify-content-space-between">
 
             <a class="is-size-5 has-text-link anterior" href="listaEncadeada.php"> Anterior </a>
-            <a class="is-size-5 has-text-link proximo" href="operacoesListaEncadeada.php"> Proximo </a>
+            <a class="is-size-5 has-text-link proximo" href="operacoesDuplamenteEncadeadas.php"> Proximo </a>
 
         </section>
     </main>
