@@ -4,6 +4,8 @@ if (!isset($_SESSION['user'])) {
     header("Location: ./");
     die();
 }
+
+$home = true;
 ?>
 
 <!DOCTYPE html>
@@ -19,30 +21,7 @@ if (!isset($_SESSION['user'])) {
 
 <body>
 
-    <header class="navbar">
-        <section class="navbar-start">
-            <button id="sidebarToggle" class="button is-info m-3">
-                <i class="fa fa-bars"></i> 
-            </button>
-            <a class="logo" href="home.php">
-                <figure class="image is-64x64">
-                    <img src="./img/logo.png" />
-                </figure>
-            </a>
-        </section>
-        <section class="navbar-end">
-            <section class="navbar-item">
-                <?php echo $_SESSION['user']; ?>
-            </section>
-            <section class="navbar-item">
-                <form method="POST" action="./funcoes/sair.php">
-                    <button type="submit" name="sair" class="button m-2">
-                        Sair
-                    </button>
-                </form>
-            </section>
-        </section>
-    </header>
+<?php require './componentes/header.php'; ?>
    
     <div id="sidebar" class="sidebar has-background-black-bis">
         <div class="sidebar-menu">
@@ -106,7 +85,7 @@ if (!isset($_SESSION['user'])) {
         </div>
 
         <div class="buttons are-large p-2 mb-5">
-            <a href="TAD.php">
+            <a href="./explicacao/TAD/TAD.php">
                 <button class="button is-info is-dark">RECEBA CONHECIMENTO</button>
             </a>
         </div>
@@ -114,28 +93,7 @@ if (!isset($_SESSION['user'])) {
 
     <script src="scripts.js"></script>
 
-    <footer class="p-2 has-background-link-light has-text-black is-flex is-flex-direction-column is-justify-content-space-between">
-        <section class="m-2 p-2">
-            <section>
-                <h3 class="subtitle is-size-5 has-text-black">
-                    Desenvolvdores:
-                </h3>
-                <section class="is-flex is-flex-direction-column">
-                    <p>Arthur Nonaka Oda <a href="https://github.com/Arthur-nonaka" target="_blank"><i
-                                class="fa fa-github"></i></a> </p>
-                    <p>Joao Luiz Souza Pereira <a href="https://github.com/joaoluiz00" target="_blank"><i
-                                class="fa fa-github"></i></a></p>
-                    <p>Gustavo Henrique Bispo Costa <a href="https://github.com/GuGuzin14" target="_blank"><i
-                                class="fa fa-github"></i></a></p>
-                    <p>Joao Pedro de Souza Cisilo <a href="https://github.com/JoaoPCisilo" target="_blank"><i
-                                class="fa fa-github"></i></a> </p>
-                </section>
-            </section>
-        </section>
-        <div class="content has-text-centered">
-            <p>W4Schools - 2024</p>
-        </div>
-    </footer>
+    <?php require './componentes/footer.php'; ?>
 </body>
 
 </html>

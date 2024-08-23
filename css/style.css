@@ -113,10 +113,10 @@ pre {
   word-wrap: break-word;
 }
 
-footer {
+/* footer {
   height: 30vh;
   bottom: 0;
-}
+} */
 
 pre span {
   display: block;
