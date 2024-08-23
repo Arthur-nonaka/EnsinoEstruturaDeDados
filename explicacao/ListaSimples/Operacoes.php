@@ -59,6 +59,12 @@ if (!isset($_SESSION['user'])) {
         <span>}</span>
         </pre>
         </section>
+        <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Exemplo em Figuras:</h2>
+        <img class="incercao" src="../../img/SEincercao.PNG">
+        <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 2:</h2>
+        <img class="incercao" src="../../img/SEincercao2.PNG">
+        <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 3:</h2>
+        <img class="incercao" src="../../img/SEincercao3.PNG">
 
                 <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Inserção no Final:</h2>
                 <p class="has-text-justified">
@@ -87,6 +93,13 @@ if (!isset($_SESSION['user'])) {
         </pre>
         </section>
 
+        <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Exemplo em Figuras:</h2>
+        <img class="incercao" src="../../img/SEincercao.PNG">
+        <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 2:</h2>
+        <img class="incercao" src="../../img/SEfim.PNG">
+        <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 3:</h2>
+        <img class="incercao" src="../../img/SEfim2.PNG">
+
                 <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Remoção do Início:</h2>
                 <p class="has-text-justified">
                     <li>Se a lista não estiver vazia, atualizamos a cabeça para o segundo
@@ -104,6 +117,12 @@ if (!isset($_SESSION['user'])) {
         <span>}</span>
         </pre>
         </section>
+        <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Exemplo em Figuras:</h2>
+        <img class="incercao" src="../../img/remove.PNG">
+        <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 2:</h2>
+        <img class="incercao" src="../../img/remove2.PNG">
+        <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 3:</h2>
+        <img class="incercao" src="../../img/remove3.PNG">
 
 
                 <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Remoção por Valor:</h2>
