@@ -133,7 +133,7 @@ pre span:before {
   color: #888
 }
 
-.sidebar {
+/* .sidebar {
   width: 250px;
   background-color: #4a4a4a;
   color: white;
@@ -144,7 +144,7 @@ pre span:before {
   transition: left 0.3s ease;
   padding-top: 6rem; 
   z-index: 1; 
-}  */
+}  
 
 .sidebar-menu {
   display: flex;
@@ -175,7 +175,7 @@ pre span:before {
 }
 .sidebar-subitem:hover {
   background-color: #363636;
-}
+} */
 
 .content {
   flex-grow: 1;
