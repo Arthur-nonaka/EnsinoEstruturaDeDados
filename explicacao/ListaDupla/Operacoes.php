@@ -54,6 +54,12 @@ if (!isset($_SESSION['user'])) {
             <span>    }</span>
         </pre>
             </section>
+            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Exemplo em Figuras:</h2>
+            <img class="incercao" src="../../img/DE.png">
+            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 2:</h2>
+            <img class="incercao" src="../../img/DE2.PNG">
+            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 3:</h2>
+            <img class="incercao" src="../../img/DE3.PNG">
 
                 <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Inserção no Final:</h2>
                 <p class="has-text-justified">
@@ -79,6 +85,12 @@ if (!isset($_SESSION['user'])) {
             <           span>    }</span>
         </pre>
             </section>
+            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Exemplo em Figuras:</h2>
+            <img class="incercao" src="../../img/DE.png">
+            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 2:</h2>
+            <img class="incercao" src="../../img/DEfim.PNG">
+            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 3:</h2>
+            <img class="incercao" src="../../img/DEfim2.PNG">
 
 
                 <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Remoção do Início:</h2>
@@ -109,6 +121,12 @@ if (!isset($_SESSION['user'])) {
 
         </pre>
             </section>
+            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Exemplo em Figuras:</h2>
+            <img class="incercao" src="../../img/DEremove.png">
+            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 2:</h2>
+            <img class="incercao" src="../../img/DEremove2.PNG">
+            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 3:</h2>
+            <img class="incercao" src="../../img/DEremove3.PNG">
 
 
                 <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Remoção no Final:</h2>
@@ -138,6 +156,12 @@ if (!isset($_SESSION['user'])) {
             <span>   { </span>
         </pre>
             </section>
+            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Exemplo em Figuras:</h2>
+            <img class="incercao" src="../../img/DEremovefim.png">
+            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 2:</h2>
+            <img class="incercao" src="../../img/DEremovefim2.PNG">
+            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 3:</h2>
+            <img class="incercao" src="../../img/DEremovefim3.PNG">
 
 
                 <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Impressão de elementos:</h2>
@@ -192,7 +216,7 @@ if (!isset($_SESSION['user'])) {
     </main>
 
     <?php require '../../componentes/footer.php'; ?>
-    <script src="scripts.js"></script>
+    <script src="../../scripts.js"></script>
 </body>
 
 </html>
