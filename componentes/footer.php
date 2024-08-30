@@ -16,6 +16,8 @@
                                 class="fa fa-github"></i></a></p>
                     <p>Joao Pedro de Souza Cisilo <a href="https://github.com/JoaoPCisilo" target="_blank"><i
                                 class="fa fa-github"></i></a> </p>
+                    <p>Matheus Bispo <a href="https://github.com/MatheusHB018" target="_blank"><i
+                                class="fa fa-github"></i></a> </p>
                 </section>
             </section>
         </section>
@@ -23,3 +25,9 @@
             <p>W4Schools - 2024</p>
         </div>
 </footer>
+
+<style>
+footer {
+    bottom: 0;
+  }
+</style>
