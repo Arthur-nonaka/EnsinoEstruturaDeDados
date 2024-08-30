@@ -4,8 +4,6 @@ if (!isset($_SESSION['user'])) {
     header("Location: ./");
     die();
 }
-
-$home = true;
 ?>
 
 <!DOCTYPE html>
@@ -23,14 +21,7 @@ $home = true;
 
 <?php require './componentes/header.php'; ?>
    
-    <div id="sidebar" class="sidebar has-background-black-bis">
-        <div class="sidebar-menu">
-            <a href="home.php" class="sidebar-item">Página Principal</a>
-            <a href="TAD.php" class="sidebar-item">TAD-Tipo Abstrato de Dados</a>
-            <a href="listaEncadeada.php" class="sidebar-item">Listas Simplesmente Encadeadas</a>
-            <a href="listaDuplamenteEncadeada.php" class="sidebar-item">Listas Duplamente Encadeadas</a>
-        </div>
-    </div>
+    <?php require './componentes/sidebar.php';?>
     
     
     <main id="content" class="has-background-white-bis is-flex is-justify-content-center is-align-items-center is-flex-direction-column">

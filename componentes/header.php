@@ -1,24 +1,12 @@
-<?php
-    $home = $home ?? false;
-    if($home == true) {
-        $link = "./home.php";
-        $src = "./img/logo.png";
-    }
-    else {
-        $link = "../../home.php";
-        $src = "../../img/logo.png";
-    }
-
-?>
 
 <header class="navbar">
         <section class="navbar-start">
             <button id="sidebarToggle" class="button is-info m-3">
                 <i class="fa fa-bars"></i> 
             </button>
-            <a class="logo" href=<?php echo $link;?>>
+            <a class="logo" href="/ensinoestruturadedados/home.php">
                 <figure class="image is-64x64">
-                    <img src=<?php echo $src;?> />
+                    <img src="/ensinoestruturadedados/img/logo.png" />
                 </figure>
             </a>
         </section>
