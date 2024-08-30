@@ -192,7 +192,7 @@ if (!isset($_SESSION['user'])) {
     </main>
 
     <?php require '../../componentes/footer.php'; ?>
-    <script src="scripts.js"></script>
+    <script src="../../scripts.js"></script>
 </body>
 
 </html>
