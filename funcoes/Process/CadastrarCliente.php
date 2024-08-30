@@ -1,7 +1,5 @@
 <?php
-require_once "banco.php";
 session_start();
-$conexao = Conectar();
 
 if (isset($_POST['nome']) && isset($_POST['senha']) && isset($_POST['email']) && $_POST['nome'] != "" && $_POST['senha'] != "" && $_POST['email'] != "") {
     $name = $_POST['nome'];
