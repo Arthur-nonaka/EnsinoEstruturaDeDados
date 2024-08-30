@@ -1,7 +1,7 @@
 
 <link rel="stylesheet" href="sidebar.css">
 
-<div id="sidebar" class="sidebar has-background-black-bis">
+<div id="sidebar" class="sidebar">
     <div class="sidebar-menu">
         <a href="/ensinoestruturadedados/home.php" class="sidebar-item">Página Principal</a>
         <a href="/ensinoestruturadedados/explicacao/TAD/TAD.php" class="sidebar-item">TAD</a>
