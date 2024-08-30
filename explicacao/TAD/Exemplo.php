@@ -54,7 +54,7 @@ if (!isset($_SESSION['user'])) {
                 </section>
 
                 <p class="has-text-justified">
-                    Criamos um Estudante com os dados Nome, Curos, Faltas e sua Matricula e seu construct. Vamos crair
+                    Criamos um Estudante com os dados Nome, Curos, Faltas e sua Matricula e seu construct. Vamos criar
                     Operações.
                 </p>
 
