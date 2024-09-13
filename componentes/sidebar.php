@@ -1,19 +1,25 @@
 
 <link rel="stylesheet" href="sidebar.css">
 
+<?php
+require_once '127.0.0.1/EnsinoEstruturaDeDados/funcoes/Process/hasSeenPage.php';
+
+$seenPages = getSeenPages();
+?>
+
 <div id="sidebar" class="sidebar">
     <div class="sidebar-menu">
-        <a href="/ensinoestruturadedados/home.php" class="sidebar-item">Página Principal</a>
-        <a href="/ensinoestruturadedados/explicacao/TAD/TAD.php" class="sidebar-item">TAD</a>
-        <a href="/ensinoestruturadedados/explicacao/TAD/interface.php" class="sidebar-subitem">Interface</a>
-        <a href="/ensinoestruturadedados/explicacao/TAD/struct.php" class="sidebar-subitem">Struct</a>
-        <a href="/ensinoestruturadedados/explicacao/TAD/exemplo.php" class="sidebar-subitem">Exemplo</a>
-        <a href="/ensinoestruturadedados/explicacao/ListaSimples/Lista.php" class="sidebar-item">Lista</a>
-        <a href="/ensinoestruturadedados/explicacao/ListaSimples/Operacoes.php" class="sidebar-subitem">Operações</a>
-        <a href="/ensinoestruturadedados/explicacao/ListaSimples/Exemplo.php" class="sidebar-subitem">Exemplo</a>
-        <a href="/ensinoestruturadedados/explicacao/ListaDupla/Lista.php" class="sidebar-item">Lista Duplamente Encadeada</a>
-        <a href="/ensinoestruturadedados/explicacao/ListaDupla/Operacoes.php" class="sidebar-subitem">Operações</a>
-        <a href="/ensinoestruturadedados/explicacao/ListaDupla/Exemplo.php" class="sidebar-subitem">Exemplo</a>
+        <a href="/ensinoestruturadedados/home.php"  class="sidebar-item">Página Principal</a>
+        <a href="/ensinoestruturadedados/explicacao/TAD/TAD.php" class="sidebar-item sidebar-link" data-page="TAD">TAD</a>
+        <a href="/ensinoestruturadedados/explicacao/TAD/interface.php" class="sidebar-subitem sidebar-link" data-page="Interface">Interface</a>
+        <a href="/ensinoestruturadedados/explicacao/TAD/struct.php" class="sidebar-subitem sidebar-link"data-page="Struct">Struct</a>
+        <a href="/ensinoestruturadedados/explicacao/TAD/exemplo.php" class="sidebar-subitem sidebar-link" data-page="TAD-Exemplo">Exemplo</a>
+        <a href="/ensinoestruturadedados/explicacao/ListaSimples/Lista.php" class="sidebar-item sidebar-link">Lista</a>
+        <a href="/ensinoestruturadedados/explicacao/ListaSimples/Operacoes.php" class="sidebar-subitem sidebar-link">Operações</a>
+        <a href="/ensinoestruturadedados/explicacao/ListaSimples/Exemplo.php" class="sidebar-subitem sidebar-link">Exemplo</a>
+        <a href="/ensinoestruturadedados/explicacao/ListaDupla/Lista.php" class="sidebar-item sidebar-link" >Lista Duplamente Encadeada</a>
+        <a href="/ensinoestruturadedados/explicacao/ListaDupla/Operacoes.php" class="sidebar-subitem sidebar-link">Operações</a>
+        <a href="/ensinoestruturadedados/explicacao/ListaDupla/Exemplo.php" class="sidebar-subitem sidebar-link">Exemplo</a>
     </div>
 </div>
 
@@ -21,7 +27,7 @@
 
 .sidebar {
   width: 250px;
-  background-color: #4a4a4a;
+  background-color: #2f12f3;
   color: rgb(26, 16, 16);
   position: fixed;
   top: 0;
@@ -63,4 +69,22 @@
 .sidebar-subitem:hover {
   background-color: #363636;
 }
+
+.visited {
+            color: gray;
+            text-decoration: line-through;
+        }
 </style>
+
+<script>
+    // Passar a variável PHP para JavaScript
+    var seenPages = <?php echo json_encode($seenPages); ?>;
+
+    // Adicionar a classe 'visited' aos links que o usuário já visitou
+    document.querySelectorAll('.sidebar-link').forEach(function(link) {
+        var page = link.getAttribute('data-page');
+        if (seenPages.includes(page)) {
+            link.classList.add('visited');
+        }
+    });
+</script>

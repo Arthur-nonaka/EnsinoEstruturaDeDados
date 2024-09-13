@@ -63,7 +63,7 @@ if (isset($_POST['action'])) {
 
         case 'logout':
             if (isset($_SESSION['user'])) {
-                session_destroy();
+                $_SESSION['user'] = null;
                 header("Location: ../../");
                 die();
             }
