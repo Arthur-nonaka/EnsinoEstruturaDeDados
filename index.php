@@ -13,7 +13,7 @@ session_start();
 
 <body class="corpo">
     <section class="login">
-        <form class="form" action="./funcoes/Process/verificarCliente.php" method="POST">
+        <form class="form" action="./funcoes/Process/Process.php" method="POST">
             <h1 class="nome">Estrutura De Dados</h1>
             <div>
                 <?php
@@ -23,6 +23,7 @@ session_start();
                 }
                 ?>
             </div>
+            <input type="hidden" name="action" value="login">
             <input type="text" name="email" id="email" placeholder="E-mail">
             <input type="password" name="senha" id="senha" placeholder="Senha">
             <input type="submit" value="Entrar" class="botao">

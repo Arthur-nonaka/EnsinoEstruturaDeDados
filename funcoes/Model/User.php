@@ -1,46 +1,44 @@
 <?php
 
 class User {
-    private $name;
+    public $name;
     private $password;
     private $email;
-    private $viewed;
-
-    public function __construct($name, $password, $email) {
+    private $coins;
+    
+    public function __construct($name, $password, $email, $coins) {
         $this->name = $name;
         $this->password = $password;
         $this->email = $email;
-        $this->viewed = [];
+        $this->coins = $coins;
     }
 
     public function getName() {
-        return $name;
+        return $this->name;
     }
     public function setName($name) {
         $this->name = $name;
     }
     
     public function getPassword() {
-        return $password;
+        return $this->password;
     }
     public function setPassword($password) {
         $this->password = $password;
     }
 
     public function getEmail() {
-        return $email;
+        return $this->email;
     }
     public function setEmail($email) {
         $this->email = $email;
     }
 
-    public function getViewed() {
-        return $viewed;
+    public function getCoins() {
+        return $this->coins;
     }
-    public function setViewed($pageId) {
-        if(!in_array($pageId, $viewed)) {
-            $this->viewed[] = $pageId;
-        }
+    public function setCoins($coins) {
+        $this->coins = $coins;
     }
 
 }

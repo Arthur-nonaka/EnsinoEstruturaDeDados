@@ -12,10 +12,12 @@
         </section>
         <section class="navbar-end">
             <section class="navbar-item">
-                <?php echo $_SESSION['user']; ?>
+                <?php 
+                echo $_SESSION['user'];?>
             </section>
             <section class="navbar-item">
-                <form method="POST" action="../funcoes/sair.php">
+                <form method="POST" action="/ensinoEstruturaDeDados/funcoes/Process/Process.php">
+                    <input type="hidden" name="action" value="logout">
                     <button type="submit" name="sair" class="button m-2">
                         Sair
                     </button>
