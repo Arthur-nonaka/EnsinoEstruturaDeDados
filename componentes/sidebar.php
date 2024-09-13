@@ -14,6 +14,8 @@
         <a href="/ensinoestruturadedados/explicacao/ListaDupla/Lista.php" class="sidebar-item">Lista Duplamente Encadeada</a>
         <a href="/ensinoestruturadedados/explicacao/ListaDupla/Operacoes.php" class="sidebar-subitem">Operações</a>
         <a href="/ensinoestruturadedados/explicacao/ListaDupla/Exemplo.php" class="sidebar-subitem">Exemplo</a>
+        <a href="/ensinoestruturadedados/explicacao/FilaFIFO/Exemplo.php" class="sidebar-item">Fila FIFO</a>
+        <a href="/ensinoestruturadedados/explicacao/FilaFIFO/Exemplo.php" class="sidebar-subitem">Operações</a>
     </div>
 </div>
 
