@@ -13,7 +13,7 @@ session_start();
 
 <body class="corpo">
     <section class="login">
-        <form class="form" action="./funcoes/verificarCliente.php" method="POST">
+        <form class="form" action="./funcoes/Process/verificarCliente.php" method="POST">
             <h1 class="nome">Estrutura De Dados</h1>
             <div>
                 <?php

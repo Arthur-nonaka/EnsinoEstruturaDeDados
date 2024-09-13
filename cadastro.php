@@ -16,7 +16,7 @@ session_start();
     <background img src="img/fundo.gif" class="imgfundo">
 
         <section class="login">
-            <form class="form" action="./funcoes/cadastrarCliente.php" method="POST">
+            <form class="form" action="./funcoes/Process/cadastrarCliente.php" method="POST">
                 <h1 class="nome">Estrutura De Dados</h1>
 
                 <div>
