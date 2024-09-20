@@ -129,88 +129,37 @@ if (!isset($_SESSION['user'])) {
             </section>
 
             </section>
-            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Exemplo em Figuras:</h2>
-            <img class="incercao" src="../../img/DEremove.png">
-            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 2:</h2>
-            <img class="incercao" src="../../img/DEremove2.PNG">
-            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 3:</h2>
-            <img class="incercao" src="../../img/DEremove3.PNG">
+           
 
 
-                <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Remoção no Final:</h2>
+                
+
+                <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Percurso:</h2>
                 <p class="has-text-justified">
-                    <li>Ajusta os ponteiros para remover o nó do final da lista.</li>
-                    <li>Atualiza a fim da lista.</li><br>
-                    <section class="mt-2 is-flex is-justify-content-center">
-                <pre style="min-width: 50vw; height: 30vh;">
-            <span>// Remoção no Final</span>
-            <span>    public void RemoverDoFinal()</span>
-            <span>        if (fim == null)</span>
-            <span>        {</span>
-            <span>            return;</span>
-            <span>        }</span>
-            <span></span>
-            <span>        if (inicio == fim)</span>
-            <span>        {</span>
-            <span>            inicio = null;</span>
-            <span>            fim = null;</span>
-            <span>        }</span>
-            <span>        else</span>
-            <span>        {</span>
-            <span>            fim = fim.Anterior;</span>
-            <span>            fim.Proximo = null;</span>
-            <span>        }</span>
-            <span>    } </span>
-            <span>   { </span>
-        </pre>
-            </section>
-            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Exemplo em Figuras:</h2>
-            <img class="incercao" src="../../img/DEremovefim.png">
-            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 2:</h2>
-            <img class="incercao" src="../../img/DEremovefim2.PNG">
-            <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5"> Parte 3:</h2>
-            <img class="incercao" src="../../img/DEremovefim3.PNG">
-
-
-                <h2 class="subtitle has-text-black-bis has-text-weight-normal is-size-5">Impressão de elementos:</h2>
-                <p class="has-text-justified">
-                    <li>Pode ser feita de duas maneiras: do início até o fim (impressão direta) ou do fim até o início
-                        (impressão reversa).</li><br>
-                <p>Impressão Direta:</p>
+                    <li>Ele percorre a Fila inteira</li><br>
+                <p>Exemplo:</p>
                 <section class="mt-2 is-flex is-justify-content-center">
                 <pre style="min-width: 50vw; height: 30vh;">
-            <span>    public void ImprimirFrente()</span>
-            <span>    {</span>
-            <span>        No atual = inicio;</span>
-            <span>        while (atual != null)</span>
-            <span>        {</span>
-            <span>            Console.Write(atual.Dado + " ");</span>
-            <span>            atual = atual.Proximo;</span>
-            <span>        }</span>
-            <span>        Console.WriteLine();</span>
-            <span>    }</span>     
+                <span>// Percurso FIFO (do início ao fim)</span>
+                <span>    public void ImprimirFila()</span>
+                <span>    {</span>
+                <span>        if (inicio == null)</span>
+                <span>        {</span>
+                <span>            Console.WriteLine("A fila está vazia!");</span>
+                <span>            return;</span>
+                <span>        }</span>
+                <span></span>
+                <span>        No atual = inicio;</span> <!-- Começa do início da fila -->
+                <span>        while (atual != null)</span> <!-- Percorre até o fim da fila -->
+                <span>        {</span>
+                <span>            Console.Write(atual.Dado + " ");</span> <!-- Imprime o valor atual -->
+                <span>            atual = atual.Proximo;</span> <!-- Move para o próximo nó -->
+                <span>        }</span>
+                <span>        Console.WriteLine();</span> <!-- Imprime uma nova linha no final -->
+                <span>    }</span>     
 
         </pre>
             </section>
-
-                <p>Impressão Reversa:</p>
-                <section class="mt-2 is-flex is-justify-content-center">
-                <pre style="min-width: 50vw; height: 30vh;">
-            <span>    public void ImprimirReverso()</span>
-            <span>    {</span>
-            <span>        No atual = fim;</span>
-            <span>        while (atual != null)</span>
-            <span>        {</span>
-            <span>            Console.Write(atual.Dado + " ");</span>
-            <span>            atual = atual.Anterior;</span>
-            <span>        }</span>
-            <span>        Console.WriteLine();</span>
-            <span>    }</span>
-            <span>}</span>         
-
-        </pre>
-            </section>
-
 
             </section>
         </section>

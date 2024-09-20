@@ -8,17 +8,18 @@
                     Desenvolvdores:
                 </h3>
                 <section class="is-flex is-flex-direction-column">
-                    <p>Arthur Nonaka Oda <a href="https://github.com/Arthur-nonaka" target="_blank"><i
-                                class="fa fa-github"></i></a> </p>
-                    <p>Joao Luiz Souza Pereira <a href="https://github.com/joaoluiz00" target="_blank"><i
-                                class="fa fa-github"></i></a></p>
-                    <p>Gustavo Henrique Bispo Costa <a href="https://github.com/GuGuzin14" target="_blank"><i
-                                class="fa fa-github"></i></a></p>
-                    <p>Joao Pedro de Souza Cisilo <a href="https://github.com/JoaoPCisilo" target="_blank"><i
-                                class="fa fa-github"></i></a> </p>
-                    <p>Matheus Bispo <a href="https://github.com/MatheusHB018" target="_blank"><i
-                                class="fa fa-github"></i></a> </p>
-                </section>
+            <p><a href="https://github.com/Arthur-nonaka" target="_blank">Arthur Nonaka Oda</a> 
+                <a href="https://github.com/Arthur-nonaka" target="_blank"><i class="fa fa-github"></i></a></p>
+            <p><a href="https://github.com/joaoluiz00" target="_blank">Joao Luiz Souza Pereira</a> 
+                <a href="https://github.com/joaoluiz00" target="_blank"><i class="fa fa-github"></i></a></p>
+            <p><a href="https://github.com/GuGuzin14" target="_blank">Gustavo Henrique Bispo Costa</a> 
+                <a href="https://github.com/GuGuzin14" target="_blank"><i class="fa fa-github"></i></a></p>
+            <p><a href="https://github.com/JoaoPCisilo" target="_blank">Joao Pedro de Souza Cisilo</a> 
+                <a href="https://github.com/JoaoPCisilo" target="_blank"><i class="fa fa-github"></i></a></p>
+            <p><a href="https://github.com/MatheusHB018" target="_blank">Matheus Bispo</a> 
+                <a href="https://github.com/MatheusHB018" target="_blank"><i class="fa fa-github"></i></a></p>
+        </section>
+
             </section>
         </section>
         <div class="content p-0 has-text-centered">
