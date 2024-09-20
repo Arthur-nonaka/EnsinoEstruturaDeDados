@@ -19,11 +19,13 @@ body {
 
 a {
   text-decoration: none;
-  i {
-    color: #000;
+  color: #000; /* Deixa o texto preto */
   
+  i {
+    color: #000; /* Mantém o ícone preto */
   }
 }
+
 
 
 .proximo {
