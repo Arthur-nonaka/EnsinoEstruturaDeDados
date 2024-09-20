@@ -51,7 +51,7 @@ body {
     position: relative;
     z-index: 3; 
     color: #fff;
-    background-color: #66D1FF;
+    background-color: #66D1FF; 
 }
 .button.is-info:hover {
     background-color: #58bbe6;

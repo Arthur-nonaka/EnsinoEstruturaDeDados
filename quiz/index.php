@@ -18,21 +18,46 @@ if (!isset($_SESSION['user'])) {
 </head>
 
 <style>
-    .button {
+    .buttonpath {
         position: absolute;
+        transform: translate(-50%, -50%); 
+        width: 120px;
+        height: 120px;
+        border-radius: 60px; /* Makes the button rounded */
+        transition: background-color 0.3s ease; /* Smooth background transition */
+        background-color: #66D1FF;
+        color: white;
+    }
+    .buttonpath:hover {
+        background-color: #58bbe6;
+    }
+    .blocked {
+        background-color: #9fa0a0; 
+    }
+    .blocked:hover {
+        background-color: #9fa0a0; 
+
     }
         .button-container {
             position: relative;
+            margin-top:8vh;
         }
         /* Position buttons at specific points */
-        .button1 { left: 10%; top: 90%; }
-        .button2 { left: 40%; top: 60%; }
-        .button3 { left: 70%; top: 30%; }
+        .button1 { left: 50%; top: 10%; }
+        .button2 { left: 30%; top: 40%; }
+        .button3 { left: 70%; top: 95%; }
+        
         svg {
             width: 100%;
-            height: 200px;
-            margin-top: 20px;
+            height: 50%;
         }
+
+        .polyline {
+        fill: none;
+        stroke: black;
+        stroke-width: 0.4;
+        stroke-dasharray: 2, 2;
+    }
 
 </style>
 
@@ -44,22 +69,21 @@ if (!isset($_SESSION['user'])) {
 
     
     <main id="content" class="has-background-white-bis is-flex is-justify-content-center is-align-items-center is-flex-direction-column">
-        <div class="content has-text-black-bis" style="height: 100vh">
+        <div class="content has-text-black-bis" style="min-height: 100vh">
             <section id="bem-vindo" class="section mt-2 pb-2">
                 <div class="container">
                     <h1 class="title has-text-info">Bem-vindo ao Quiz</h1>
                     <h3> Aqui você irá testar seus conhecimentos em diferentes <span class="has-text-info">matérias</span>. Responda corretamente e ganhará <span style="color: gold">moedas</span>, podendo comprar roupinhas para seu personagem!</h3>
                 </div>
-                    <div class="button-container">
-                        <a href="path1.html" class="button button1">Button 1</a>
-                        <a href="path2.html" class="button button2">Button 2</a>
-                        <a href="path3.html" class="button button3">Button 3</a>
-                        
-                        <svg>
-                            <polyline points="0,100 50,60 100,80 150,30 200,70 250,20 300,90 350,50 400,100"
-                            style="fill:none;stroke:black;stroke-width:2;stroke-dasharray:5,5" />
-                        </svg>
-                    </div>
+                <div class="button-container">
+                    
+                    <a href="path1.html" class="button buttonpath button1">TAD</a>
+                    <a href="path2.html" class="button buttonpath button2 blocked">Lista Simples</a>
+                    <a href="path3.html" class="button buttonpath button3">Lista Dupla</a>
+                    <svg viewBox="0 0 300 120" preserveAspectRatio="xMaxyMin">
+                        <polyline points="150,15 110,25 85,45 110,90 150,107 200,115" class="polyline" />
+                    </svg>
+                </div>
                 </section>
         </div>
     </main>
