@@ -36,4 +36,16 @@ class Controller {
         }
         return false;
     }
+
+    public function gainMoney($amount, $id) {
+        $result = $this->database->getUserById($id);
+        $data = $result->fetch_assoc();
+        $user = new User($data['name'], $data['password'], $data['email'], $data['coins']);
+        $user->setCoins($user->getCoins() + $amount);
+        $this->database->updateUser($user, $id);
+    }
+
+    public function buyCosmetic($price, $cosmeticId, $id) {
+        
+    }
 }
