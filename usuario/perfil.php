@@ -1,48 +1,44 @@
 <?php
 session_start();
 
-// Conexão com o banco de dados
-$servername = "localhost";
-$username = "host"; // Coloque seu usuário
-$password = ""; // Coloque sua senha
-$dbname = "estruturadados";
+try {
+    // Configurações de conexão
+    $dsn = 'mysql:host=localhost;dbname=estruturadados;charset=utf8mb4';
+    $username = 'usuario'; // Substitua pelo seu usuário do MySQL
+    $password = '0000'; // Substitua pela sua senha do MySQL
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+    // Cria uma nova conexão PDO
+    $conn = new PDO("mysql:host=localhost;dbname=estruturadados", "usuario", "senha");
 
-// Verifica a conexão
-if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error);
-}
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-echo "Conexão bem-sucedida!";
-$conn->close();
+    // Obtém o ID do usuário da sessão
+    $userId = $_SESSION['user_id'] ?? 1; // Ajuste conforme necessário
 
-// Obtém o ID do usuário da sessão (ou ajuste conforme sua lógica)
-$userId = $_SESSION['user_id'] ?? 1; // Exemplo: ID do usuário logado
+    // Busca informações do usuário
+    $stmt = $conn->prepare("SELECT * FROM users WHERE id = :id");
+    $stmt->bindParam(':id', $userId, PDO::PARAM_INT);
+    $stmt->execute();
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-// Busca informações do usuário
-$sql = "SELECT * FROM users WHERE id = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("i", $userId);
-$stmt->execute();
-$result = $stmt->get_result();
-$user = $result->fetch_assoc();
+    // Se o formulário for enviado, atualiza as informações do usuário
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
 
-// Se o formulário for enviado, atualiza as informações do usuário
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $bio = $_POST['bio']; // Se você quiser adicionar um campo bio
+        // Atualiza as informações no banco de dados
+        $updateStmt = $conn->prepare("UPDATE users SET name = :name, email = :email WHERE id = :id");
+        $updateStmt->bindParam(':name', $name);
+        $updateStmt->bindParam(':email', $email);
+        $updateStmt->bindParam(':id', $userId, PDO::PARAM_INT);
+        $updateStmt->execute();
 
-    // Atualiza as informações no banco de dados
-    $updateSql = "UPDATE users SET name = ?, email = ? WHERE id = ?";
-    $updateStmt = $conn->prepare($updateSql);
-    $updateStmt->bind_param("ssi", $name, $email, $userId);
-    $updateStmt->execute();
-
-    // Redireciona para evitar reenvio de formulário
-    header("Location: perfil.php");
-    exit();
+        // Redireciona para evitar reenvio de formulário
+        header("Location: perfil.php");
+        exit();
+    }
+} catch (PDOException $e) {
+    die("Erro ao conectar: " . $e->getMessage());
 }
 ?>
 
@@ -81,12 +77,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                 </div>
                 <div class="field">
-                    <label class="label" for="bio">Biografia</label>
-                    <div class="control">
-                        <textarea class="textarea" id="bio" name="bio" rows="5"><?php // Adicione o campo bio se necessário ?></textarea>
-                    </div>
-                </div>
-                <div class="field">
                     <div class="control">
                         <button type="submit" class="button is-primary">Salvar Alterações</button>
                     </div>
@@ -96,7 +86,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </body>
 </html>
-
-<?php
-$conn->close();
-?>
