@@ -191,7 +191,7 @@ pre span:before {
     position: relative;
     z-index: 3;
     color: #fff;
-    background-color: #66D1FF !important; 
+    background-color: #66D1FF; 
 }
 
 .incercao{

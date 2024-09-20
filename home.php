@@ -74,11 +74,17 @@ if (!isset($_SESSION['user'])) {
                 </div>
             </section>
         </div>
-
-        <div class="buttons are-large p-2 mb-5">
-            <a href="./explicacao/TAD/TAD.php">
-                <button class="button is-info is-dark">RECEBA CONHECIMENTO</button>
-            </a>
+        <div class="is-flex is-justify-content-space-between is-align-items-center " style="width: 50vw">
+            <div class="buttons are-large p-2 mb-5">
+                <a href="./explicacao/TAD/TAD.php">
+                    <button class="button is-info is-dark">RECEBA CONHECIMENTO</button>
+                </a>
+            </div>
+            <div class="buttons are-large p-2 mb-5">
+                <a href="./quiz">
+                    <button class="button is-info is-dark quiz">QUIZ !!</button>
+                </a>
+            </div>
         </div>
     </main>
 

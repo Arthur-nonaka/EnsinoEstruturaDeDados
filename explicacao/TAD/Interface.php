@@ -4,10 +4,6 @@ if (!isset($_SESSION['user'])) {
     header("Location: ./");
     die();
 }
-
-
-require_once "../../funcoes/hasSeenPage.php";
-hasSeenPage("Interface");
 ?>
 
 <!DOCTYPE html>

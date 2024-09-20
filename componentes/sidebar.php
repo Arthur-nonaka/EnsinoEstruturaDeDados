@@ -1,12 +1,6 @@
 
 <link rel="stylesheet" href="sidebar.css">
 
-<?php
-require_once '127.0.0.1/EnsinoEstruturaDeDados/funcoes/Process/hasSeenPage.php';
-
-$seenPages = getSeenPages();
-?>
-
 <div id="sidebar" class="sidebar">
     <div class="sidebar-menu">
         <a href="/ensinoestruturadedados/home.php"  class="sidebar-item">Página Principal</a>

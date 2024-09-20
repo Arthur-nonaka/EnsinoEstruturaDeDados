@@ -46,14 +46,17 @@ body {
     margin-top: 2rem;
 }
 
-.button.is-info,
-.button.is-info:hover {
+.button.is-info {
     margin-bottom: 1rem;
     position: relative;
     z-index: 3; 
     color: #fff;
-    background-color: #66D1FF !important;
+    background-color: #66D1FF;
 }
+.button.is-info:hover {
+    background-color: #58bbe6;
+}
+
 a {
     text-decoration: none;
     i {
