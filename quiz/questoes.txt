@@ -1,0 +1,242 @@
+Arrays: coleções ordenadas de elementos do mesmo tipo, como números ou nomes.
+
+1. **O que é um array?**
+   - A) Uma coleção desordenada de elementos (I)
+   - B) Uma coleção ordenada de elementos do mesmo tipo (C)
+   - C) Um tipo de variável única (I)
+   - D) Um método de ordenação de dados (I)
+
+2. **Qual dos seguintes elementos pode ser armazenado em um array?**
+   - A) Apenas números (I)
+   - B) Elementos do mesmo tipo (C)
+   - C) Elementos de tipos diferentes (I)
+   - D) Nenhuma das alternativas acima (I)
+
+3. **Qual é a principal característica de um array?**
+   - A) Os elementos são sempre do tipo string (I)
+   - B) Os elementos são ordenados (C)
+   - C) Os arrays não podem ser modificados (I)
+   - D) Os elementos podem ser de qualquer tamanho (I)
+
+4. **Como você acessa o primeiro elemento de um array em muitas linguagens de programação?**
+   - A) array[0] (C)
+   - B) array[1] (I)
+   - C) first(array) (I)
+   - D) array.first() (I)
+
+5. **Qual é um exemplo de um array que armazena números?**
+   - A) ["maçã", "banana", "laranja"] (I)
+   - B) [1, 2, 3, 4, 5] (C)
+   - C) [1.5, "dois", 3.0] (I)
+   - D) [null, 0, undefined] (I)
+
+6. **Qual é um uso comum de arrays na programação?**
+   - A) Armazenar arquivos em disco (I)
+   - B) Criar gráficos (I)
+   - C) Manter uma coleção de dados relacionados (C)
+   - D) Construir interfaces gráficas (I)
+ 
+ ------------------------------------------------
+ ------------------------------------------------
+
+Listas ligadas: conjuntos de elementos interligados, onde cada elemento possui um ponteiro para o próximo.
+
+1. **O que é uma lista ligada?**
+   - A) Um conjunto de elementos desordenados (I)
+   - B) Um conjunto de elementos interligados (C)
+   - C) Um tipo de matriz (I)
+   - D) Uma coleção de dados em formato de tabela (I)
+
+2. **Qual é a principal característica de uma lista ligada?**
+   - A) Os elementos têm índices numéricos (I)
+   - B) Cada elemento possui um ponteiro para o próximo (C)
+   - C) Os elementos são armazenados em sequência na memória (I)
+   - D) A lista é de tamanho fixo (I)
+
+3. **O que é um ponteiro em uma lista ligada?**
+   - A) Um valor numérico (I)
+   - B) Uma referência para o próximo elemento (C)
+   - C) Um tipo de dado (I)
+   - D) Um método para ordenar a lista (I)
+
+4. **Qual é uma vantagem das listas ligadas sobre arrays?**
+   - A) Acesso aleatório mais rápido (I)
+   - B) Facilidade de inserção e remoção de elementos (C)
+   - C) Menor uso de memória em geral (I)
+   - D) Estrutura de dados mais simples (I)
+
+5. **Qual dos seguintes é um tipo de lista ligada?**
+   - A) Lista circular (C)
+   - B) Lista de arrays (I)
+   - C) Lista com elementos duplicados (I)
+   - D) Lista hash (I)
+
+6. **O que acontece quando você remove um elemento de uma lista ligada?**
+   - A) O ponteiro do elemento anterior é atualizado (C)
+   - B) O elemento é movido para o final da lista (I)
+   - C) Todos os elementos são reorganizados (I)
+   - D) O primeiro elemento é duplicado (I)
+
+------------------------------------------------
+------------------------------------------------
+
+Pilhas: estruturas onde o último elemento inserido é o primeiro a ser removido, seguindo a regra "LIFO" (Last In, First Out).
+
+1. **O que é uma pilha?**
+   - A) Uma estrutura de dados onde o primeiro elemento inserido é o primeiro a ser removido (I)
+   - B) Uma estrutura onde o último elemento inserido é o primeiro a ser removido (C)
+   - C) Uma coleção de elementos desordenados (I)
+   - D) Uma estrutura de dados em formato de árvore (I)
+
+2. **Qual é a regra que rege o funcionamento de uma pilha?**
+   - A) FIFO (First In, First Out) (I)
+   - B) LIFO (Last In, First Out) (C)
+   - C) FILO (First In, Last Out) (I)
+   - D) ALEATÓRIO (I)
+
+3. **Qual operação é usada para adicionar um elemento a uma pilha?**
+   - A) Push (C)
+   - B) Pop (I)
+   - C) Peek (I)
+   - D) Shift (I)
+
+4. **Qual operação é usada para remover o elemento do topo da pilha?**
+   - A) Push (I)
+   - B) Pop (C)
+   - C) Peek (I)
+   - D) Add (I)
+
+5. **Qual das seguintes afirmações sobre pilhas é verdadeira?**
+   - A) Você pode acessar qualquer elemento a qualquer momento (I)
+   - B) O último elemento inserido é o primeiro a ser removido (C)
+   - C) Pilhas não podem ser vazias (I)
+   - D) Pilhas têm um tamanho fixo (I)
+
+6. **Um exemplo comum de uso de pilhas é:**
+   - A) Navegação em páginas da web (C)
+   - B) Armazenar dados em uma tabela (I)
+   - C) Manter uma lista de contatos (I)
+   - D) Armazenar arquivos em disco (I)
+
+------------------------------------------------
+------------------------------------------------
+
+Filas: estruturas onde o primeiro elemento inserido é o primeiro a ser removido, seguindo a regra "FIFO" (First In, First Out).
+
+1. **O que é uma fila?**
+   - A) Uma estrutura de dados onde o último elemento inserido é o primeiro a ser removido (I)
+   - B) Uma estrutura onde o primeiro elemento inserido é o primeiro a ser removido (C)
+   - C) Uma coleção de elementos desordenados (I)
+   - D) Uma estrutura de dados em formato de árvore (I)
+
+2. **Qual é a regra que rege o funcionamento de uma fila?**
+   - A) LIFO (Last In, First Out) (I)
+   - B) FIFO (First In, First Out) (C)
+   - C) FILO (First In, Last Out) (I)
+   - D) ALEATÓRIO (I)
+
+3. **Qual operação é usada para adicionar um elemento a uma fila?**
+   - A) Pop (I)
+   - B) Enqueue (C)
+   - C) Dequeue (I)
+   - D) Peek (I)
+
+4. **Qual operação é usada para remover o elemento da frente da fila?**
+   - A) Enqueue (I)
+   - B) Pop (I)
+   - C) Dequeue (C)
+   - D) Add (I)
+
+5. **Qual das seguintes afirmações sobre filas é verdadeira?**
+   - A) Você pode acessar qualquer elemento a qualquer momento (I)
+   - B) O primeiro elemento inserido é o primeiro a ser removido (C)
+   - C) Filas não podem ser vazias (I)
+   - D) Filas têm um tamanho fixo (I)
+
+6. **Um exemplo comum de uso de filas é:**
+   - A) Navegação em páginas da web (I)
+   - B) Processamento de tarefas em um sistema operacional (C)
+   - C) Armazenar dados em uma tabela (I)
+   - D) Armazenar arquivos em disco (I)
+
+------------------------------------------------
+------------------------------------------------
+
+Árvores: estruturas hierárquicas com um elemento raiz e diversos elementos filhos.
+
+1. **O que é uma árvore em estruturas de dados?**
+   - A) Uma estrutura linear de dados (I)
+   - B) Uma estrutura hierárquica com um elemento raiz e diversos elementos filhos (C)
+   - C) Uma coleção de elementos desordenados (I)
+   - D) Uma lista de elementos em sequência (I)
+
+2. **Qual é o elemento principal de uma árvore?**
+   - A) Folha (I)
+   - B) Nó (I)
+   - C) Raiz (C)
+   - D) Subárvore (I)
+
+3. **O que são folhas em uma árvore?**
+   - A) Nós que têm filhos (I)
+   - B) Nós que não têm filhos (C)
+   - C) Nós que são a raiz (I)
+   - D) Nós que têm apenas um filho (I)
+
+4. **Qual das seguintes afirmações sobre árvores é verdadeira?**
+   - A) Todas as árvores têm o mesmo número de filhos (I)
+   - B) Uma árvore pode ter múltiplas raízes (I)
+   - C) Uma árvore é uma estrutura de dados não linear (C)
+   - D) Nós em uma árvore sempre têm dois filhos (I)
+
+5. **Qual é uma característica das árvores binárias?**
+   - A) Cada nó pode ter até três filhos (I)
+   - B) Cada nó pode ter até dois filhos (C)
+   - C) Não podem ter filhos (I)
+   - D) Todos os nós são folhas (I)
+
+6. **Um exemplo comum de uso de árvores em computação é:**
+   - A) Estruturas de arquivos em disco (C)
+   - B) Armazenar dados em uma tabela (I)
+   - C) Listas de contatos (I)
+   - D) Processamento de texto (I)
+
+------------------------------------------------
+------------------------------------------------
+
+Grafos: estruturas compostas por nós interligados por arestas, representando relações entre elementos.
+
+1. **O que é um grafo em estruturas de dados?**
+   - A) Uma estrutura linear de dados (I)
+   - B) Uma coleção de nós interligados por arestas (C)
+   - C) Uma lista de elementos em sequência (I)
+   - D) Uma estrutura hierárquica com um elemento raiz (I)
+
+2. **O que representa uma aresta em um grafo?**
+   - A) Um nó isolado (I)
+   - B) A conexão entre dois nós (C)
+   - C) Um tipo de dado (I)
+   - D) A raiz do grafo (I)
+
+3. **Qual é a diferença entre um grafo dirigido e um grafo não dirigido?**
+   - A) Grafos dirigidos não têm arestas (I)
+   - B) Grafos dirigidos têm arestas com direção, enquanto grafos não dirigidos não têm (C)
+   - C) Grafos não dirigidos têm apenas um nó (I)
+   - D) Grafos dirigidos têm um número fixo de nós (I)
+
+4. **Qual das seguintes afirmações sobre grafos é verdadeira?**
+   - A) Todos os grafos têm um número fixo de arestas (I)
+   - B) Um grafo pode ser cíclico ou acíclico (C)
+   - C) Nós em um grafo não podem ser conectados (I)
+   - D) Grafos sempre têm um nó raiz (I)
+
+5. **Qual é um exemplo comum de uso de grafos?**
+   - A) Estruturas de arquivos em disco (I)
+   - B) Redes sociais (C)
+   - C) Listas de contatos (I)
+   - D) Processamento de texto (I)
+
+6. **O que é um caminho em um grafo?**
+   - A) A soma de todos os nós (I)
+   - B) A sequência de arestas que conecta dois nós (C)
+   - C) Um nó isolado (I)
+   - D) A raiz do grafo (I)
