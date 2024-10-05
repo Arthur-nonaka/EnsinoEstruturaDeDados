@@ -17,6 +17,9 @@
         <a href="/ensinoestruturadedados/explicacao/FilaFIFO/Fila.php" class="sidebar-item sidebar-link">Fila FIFO</a>
         <a href="/ensinoestruturadedados/explicacao/FilaFIFO/Operacoes.php" class="sidebar-subitem sidebar-link">Operações</a>
         <a href="/ensinoestruturadedados/explicacao/FilaFIFO/Exemplo.php" class="sidebar-subitem sidebar-link">Exemplos</a>
+        <a href="/ensinoestruturadedados/explicacao/FilaPrioridade/Fila.php" class="sidebar-item sidebar-link">Fila De Prioridade</a>
+        <a href="/ensinoestruturadedados/explicacao/FilaPrioridade/Operacoes.php" class="sidebar-subitem sidebar-link">Operações</a>
+        <a href="/ensinoestruturadedados/explicacao/FilaPrioridade/Exemplo.php" class="sidebar-subitem sidebar-link">Exemplos</a>
     </div>
 </div>
 
