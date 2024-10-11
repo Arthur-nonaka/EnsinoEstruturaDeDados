@@ -4,16 +4,19 @@ session_start();
 try {
     // Configurações de conexão
     $dsn = 'mysql:host=localhost;dbname=estruturadados;charset=utf8mb4';
-    $username = 'usuario'; // Substitua pelo seu usuário do MySQL
-    $password = '0000'; // Substitua pela sua senha do MySQL
+    $username = 'root'; // Substitua pelo seu usuário do MySQL
+    $password = ''; // Substitua pela sua senha do MySQL
 
     // Cria uma nova conexão PDO
-    $conn = new PDO("mysql:host=localhost;dbname=estruturadados", "usuario", "senha");
-
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
+        $conn = new PDO("mysql:host=localhost;dbname=estruturadados", "root", "");
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+        echo "Erro ao conectar: " . $e->getMessage();
+    }
 
     // Obtém o ID do usuário da sessão
-    $userId = $_SESSION['user_id'] ?? 1; // Ajuste conforme necessário
+    $userId = $_SESSION['id'] ?? 1;
 
     // Busca informações do usuário
     $stmt = $conn->prepare("SELECT * FROM users WHERE id = :id");
@@ -24,24 +27,30 @@ try {
     // Se o formulário for enviado, atualiza as informações do usuário
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $name = $_POST['name'];
-        $email = $_POST['email'];
+        $newPassword = $_POST['password'];
 
-        // Atualiza as informações no banco de dados
-        $updateStmt = $conn->prepare("UPDATE users SET name = :name, email = :email WHERE id = :id");
-        $updateStmt->bindParam(':name', $name);
-        $updateStmt->bindParam(':email', $email);
-        $updateStmt->bindParam(':id', $userId, PDO::PARAM_INT);
-        $updateStmt->execute();
-
-        // Redireciona para evitar reenvio de formulário
-        header("Location: perfil.php");
-        exit();
+        // Verifica se a senha foi fornecida e a atualiza
+        if (!empty($newPassword)) {
+            $hashedPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+            
+            // Atualiza o nome e a senha no banco de dados
+            $updateStmt = $conn->prepare("UPDATE users SET name = :name, password = :password WHERE id = :id");
+            $updateStmt->bindParam(':name', $name);
+            $updateStmt->bindParam(':password', $hashedPassword);
+            $updateStmt->bindParam(':id', $userId, PDO::PARAM_INT);
+            $updateStmt->execute();
+            
+            // Redireciona para evitar reenvio de formulário
+            header("Location: perfil.php");
+            exit();
+        }
     }
 } catch (PDOException $e) {
     die("Erro ao conectar: " . $e->getMessage());
 }
 ?>
 
+<!-- HTML para exibir o formulário -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -74,11 +83,15 @@ try {
                     <label class="label" for="email">Email</label>
                     <div class="control">
                         <input class="input" type="email" id="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" required>
+                <div class="field">
+                    <label class="label" for="password">Nova Senha</label>
+                    <div class="control">
+                        <input class="input" type="password" id="password" name="password" placeholder="Deixe em branco para manter a senha atual">
                     </div>
                 </div>
                 <div class="field">
                     <div class="control">
-                        <button type="submit" class="button is-primary">Salvar Alterações</button>
+                        <button type="submit" class="button is-info">Salvar Alterações</button>
                     </div>
                 </div>
             </form>
