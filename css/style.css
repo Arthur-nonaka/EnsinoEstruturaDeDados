@@ -199,6 +199,15 @@ pre span:before {
 .incercao{
   margin-left: 300px;
 }
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 350px;
+  height: 350px;
+
+}
+
 .incercaoPrioridade {
   margin-left: 400px;
 

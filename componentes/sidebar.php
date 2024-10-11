@@ -20,6 +20,10 @@
         <a href="/ensinoestruturadedados/explicacao/FilaPrioridade/Fila.php" class="sidebar-item sidebar-link">Fila De Prioridade</a>
         <a href="/ensinoestruturadedados/explicacao/FilaPrioridade/Operacoes.php" class="sidebar-subitem sidebar-link">Operações</a>
         <a href="/ensinoestruturadedados/explicacao/FilaPrioridade/Exemplo.php" class="sidebar-subitem sidebar-link">Exemplos</a>
+        <a href="/ensinoestruturadedados/explicacao/PilhaLIFO/Pilha.php" class="sidebar-item sidebar-link">Pilha LIFO</a>
+        <a href="/ensinoestruturadedados/explicacao/PilhaLIFO/Operacoes.php" class="sidebar-subitem sidebar-link">Operações</a>
+        <a href="/ensinoestruturadedados/explicacao/PilhaLIFO/Exemplo.php" class="sidebar-subitem sidebar-link">Exemplos</a>
+        
     </div>
 </div>
 
