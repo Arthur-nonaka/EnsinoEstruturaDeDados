@@ -46,7 +46,7 @@ if (isset($_POST['action'])) {
             if (isset($_POST['email'], $_POST['senha'])) {
                 $email = $_POST['email'];
                 $password = $_POST['senha'];
-                if($controller->loginUser($email, $password)) {
+                if ($controller->loginUser($email, $password)) {
                     header("Location: ../../home.php");
                     die();
                 } else {
@@ -65,6 +65,16 @@ if (isset($_POST['action'])) {
             if (isset($_SESSION['user'])) {
                 $_SESSION['user'] = null;
                 header("Location: ../../");
+                die();
+            }
+            break;
+
+        case 'completeClass':
+            if (isset($_POST['id'], $_POST['class'])) {
+                $id = $_POST['id'];
+                $class = $_POST['class'];
+                $controller->completeClass($id, $class);
+                // header("Location: ../../quiz/index.php");
                 die();
             }
             break;

@@ -29,7 +29,6 @@ CREATE TABLE class (
 CREATE TABLE users_class (
     users_id INT,
     class_id INT,
-    completed BOOLEAN NOT NULL,
     PRIMARY KEY (users_id, class_id),
     FOREIGN KEY (users_id) REFERENCES users(id),
     FOREIGN KEY (class_id) REFERENCES class(id)

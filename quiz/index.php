@@ -77,8 +77,8 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div class="button-container">
                     
-                    <a href="path1.html" class="button buttonpath button1">TAD</a>
-                    <a href="path2.html" class="button buttonpath button2 blocked">Lista Simples</a>
+                    <a href="./quizTAD.php" class="button buttonpath button1">TAD</a>
+                    <a href="./quizListaSimples.php" class="button buttonpath button2 blocked">Lista Simples</a>
                     <a href="path3.html" class="button buttonpath button3">Lista Dupla</a>
                     <svg viewBox="0 0 300 120" preserveAspectRatio="xMaxyMin">
                         <polyline points="150,15 110,25 85,45 110,90 150,107 200,115" class="polyline" />
