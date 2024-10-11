@@ -31,23 +31,24 @@
 
 .sidebar {
   width: 250px;
-  background-color: #2f12f3;
-  color: rgb(26, 16, 16);
+  background-color: #66D1FF;
+  color: rgb(20, 22, 26);
   position: fixed;
   top: 0;
   left: -250px;
   height: 100%;
-  max-height: 100vh; /* Limita a altura da sidebar */
   overflow-y: auto; /* Remove a barra de rolagem */
   transition: left 0.3s ease;
   padding-top: 6rem;
   z-index: 1;
-}
-/* Oculta a barra de rolagem em navegadores WebKit */
-.sidebar::-webkit-scrollbar {
-  display: none; /* Esconde a barra de rolagem */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  scrollbar-color: #363636 #66D1FF; /* Cor da barra de rolagem */
+  scrollbar-width: thin; /* Largura da barra de rolagem */
 }
 
+/* .sidebar::-webkit-scrollbar {
+  width: 8px;
+} */
 .sidebar-menu {
   display: flex;
   flex-direction: column;
@@ -57,9 +58,8 @@
 .sidebar-item {
   padding: 1rem;
   padding-bottom: 0.5rem;
-
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
   display: block;
 }
 
@@ -78,6 +78,11 @@
 
 .sidebar-subitem:hover {
   background-color: #363636;
+}
+
+/* Add shadow to the last item in the sidebar */
+.sidebar-menu a:last-child {
+  box-shadow: 0 4px 2px -2px gray;
 }
 
 .visited {

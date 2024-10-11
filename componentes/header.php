@@ -12,7 +12,7 @@
     <section class="navbar-end">
         <section class="navbar-item">
             <?php if (isset($_SESSION['user'])): ?>
-                <a class="button is-info" href="../EnsinoEstruturaDeDados/usuario/perfil.php">
+                <a class="button is-info" href="../../usuario/perfil.php">
                      <?php echo htmlspecialchars($_SESSION['user']); ?>
                 </a>
             <?php endif; ?>
