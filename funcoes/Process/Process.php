@@ -50,7 +50,9 @@ if (isset($_POST['action'])) {
                     header("Location: ../../home.php");
                     die();
                 } else {
-                    $_SESSION['res'] = "Senha invalida";
+                    $_SESSION['res'] = "<span style='color: red;'>Senha invalida</span>";
+                    header("Location: ../../");
+
                     header("Location: ../../");
                     die();
                 }
