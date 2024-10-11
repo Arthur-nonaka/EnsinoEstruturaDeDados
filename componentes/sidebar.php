@@ -37,9 +37,15 @@
   top: 0;
   left: -250px;
   height: 100%;
+  max-height: 100vh; /* Limita a altura da sidebar */
+  overflow-y: auto; /* Remove a barra de rolagem */
   transition: left 0.3s ease;
   padding-top: 6rem;
   z-index: 1;
+}
+/* Oculta a barra de rolagem em navegadores WebKit */
+.sidebar::-webkit-scrollbar {
+  display: none; /* Esconde a barra de rolagem */
 }
 
 .sidebar-menu {
