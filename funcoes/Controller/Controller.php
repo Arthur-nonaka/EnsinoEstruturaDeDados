@@ -14,8 +14,13 @@ class Controller
 
     public function createUser($name, $password, $email, $coins)
     {
-        $user = new User($name, $password, $email, $coins, []);
-        $this->database->insertUser($user);
+        $user = new User($name, $password, $email, $coins, [], [10,20,30]);
+        $userId = $this->database->insertUser($user);
+        $this->database->insertUserItems($userId, $user->getItems());
+        session_start();
+        $createdUser = $this->database->getUserByEmail($user->getEmail());
+        $_SESSION['id'] = $createdUser['id'];
+        $_SESSION['user'] = $createdUser['name'];
     }
 
     public function readUser($id)
@@ -74,9 +79,24 @@ class Controller
         $this->database->updateUser($user, $id);
     }
 
-    public function buyCosmetic($price, $cosmeticId, $id)
-    {
+    public function getItems() {
+        return $this->database->getItems();
+    }
 
+    public function getUserItems($userId) {
+        return $this->database->getUserItems($userId);
+    }
+
+    public function buyItem($userId, $itemId, $itemPrice) {
+        $user = $this->readUser($userId);
+        if ($user->getCoins() < $itemPrice) {
+            return false;
+        }
+        return $this->database->buyItem($userId, $itemId, $itemPrice);
+    }
+
+    public function equipItem($userId, $itemId) {
+        return $this->database->equipItem($userId, $itemId);
     }
 
     public function getQuestions($classId)

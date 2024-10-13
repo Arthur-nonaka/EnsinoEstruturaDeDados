@@ -50,7 +50,6 @@ try {
 }
 ?>
 
-<!-- HTML para exibir o formulário -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

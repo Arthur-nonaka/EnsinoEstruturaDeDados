@@ -10,12 +10,14 @@ CREATE TABLE items (
     id INT PRIMARY KEY AUTO_INCREMENT,
     price FLOAT NOT NULL,
     name VARCHAR(40) NOT NULL,
-    path VARCHAR(255) NOT NULL
+    path VARCHAR(255) NOT NULL,
+    type ENUM('head', 'torso', 'legs') NOT NULL
 );
 
 CREATE TABLE users_items (
     users_id INT,
     items_id INT,
+    eqquiped BOOLEAN DEFAULT FALSE,
     PRIMARY KEY (users_id, items_id),
     FOREIGN KEY (users_id) REFERENCES users(id) ON DELETE CASCADE,
     FOREIGN KEY (items_id) REFERENCES items(id) ON DELETE CASCADE
@@ -116,3 +118,24 @@ INSERT INTO questions (question, a, b, c, d, correct, class_id) VALUES
 ('Qual é a vantagem de usar uma Pilha?', 'Fácil de implementar', 'Fácil de acessar elementos', 'Fácil de ordenar', 'Permite gerenciar tarefas com diferentes prioridades', 'D', 6),
 ('Qual é a desvantagem de usar uma Pilha?', 'Difícil de implementar', 'Difícil de acessar elementos', 'Difícil de ordenar', 'Pode ser ineficiente para grandes conjuntos de dados', 'D', 6),
 ('Como é representada uma Pilha?', 'Como um array', 'Como uma matriz', 'Como uma árvore', 'Como uma sequência de nós', 'C', 6);
+
+insert INTO items (id, price, name, path, type) VALUES
+(10,50, 'perna5', '/EnsinoEstruturaDeDados/img/perso/perna.png', 'legs'),
+(11,30, 'perna1', '/EnsinoEstruturaDeDados/img/perso/perna1.png', 'legs'),
+(12,50, 'perna2', '/EnsinoEstruturaDeDados/img/perso/perna2.png' , 'legs'),
+(13,60, 'perna3', '/EnsinoEstruturaDeDados/img/perso/perna3.png' , 'legs'),
+(14,50, 'perna4', '/EnsinoEstruturaDeDados/img/perso/perna4.png' , 'legs'),
+(22,50, 'corpo1', '/EnsinoEstruturaDeDados/img/perso/corpo1.png' , 'torso'),
+(23,70, 'corpo2', '/EnsinoEstruturaDeDados/img/perso/corpo2.png' , 'torso'),
+(24,70, 'corpo3', '/EnsinoEstruturaDeDados/img/perso/corpo3.png' , 'torso'),
+(25,90, 'corpo4', '/EnsinoEstruturaDeDados/img/perso/corpo4.png' , 'torso'),
+(20,90, 'corpo5', '/EnsinoEstruturaDeDados/img/perso/corpo5.png' , 'torso'),
+(30,30, 'rosto1', '/EnsinoEstruturaDeDados/img/perso/rosto1.png' , 'head'),
+(31,50, 'rosto2', '/EnsinoEstruturaDeDados/img/perso/rosto2.png' , 'head'),
+(32,50, 'rosto3', '/EnsinoEstruturaDeDados/img/perso/rosto3.png' , 'head'),
+(33,70, 'rosto4', '/EnsinoEstruturaDeDados/img/perso/rosto4.png' , 'head'),
+-- (34,100, 'rosto5', '/EnsinoEstruturaDeDados/img/perso/rosto5.png' , 'head'),
+(35,160, 'rosto6', '/EnsinoEstruturaDeDados/img/perso/rosto6.png' , 'head'),
+(36,300, 'rosto7', '/EnsinoEstruturaDeDados/img/perso/rosto7.png' , 'head');
+
+

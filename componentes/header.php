@@ -12,10 +12,15 @@
     <section class="navbar-end">
         <section class="navbar-item">
             <?php if (isset($_SESSION['user'])): ?>
-                <a class="button is-info" href="../../usuario/perfil.php">
+                <a class="button is-info" href="/EnsinoEstruturaDeDados/usuario/perfil.php">
                      <?php echo htmlspecialchars($_SESSION['user']); ?>
                 </a>
             <?php endif; ?>
+        </section>
+        <section class="navbar-item">
+                <a class="button is-info" href="/EnsinoEstruturaDeDados/usuario/char.php">
+                     Character
+                </a>
         </section>
         <section class="navbar-item">
             <form method="POST" action="/ensinoEstruturaDeDados/funcoes/Process/Process.php">

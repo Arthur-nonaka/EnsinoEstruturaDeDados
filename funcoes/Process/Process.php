@@ -81,9 +81,33 @@ if (isset($_POST['action'])) {
             }
             break;
 
+        case 'buyItem':
+            if (isset($_POST['userId'], $_POST['itemId'], $_POST['itemPrice'])) {
+                $userId = $_POST['userId'];
+                $itemId = $_POST['itemId'];
+                $itemPrice = $_POST['itemPrice'];
+                $controller->buyItem($userId, $itemId, $itemPrice);
+                header("Location: ../../usuario/char.php");
+                die();
+            }
+
+            break;
+
+        case 'equipItem':
+            if (isset($_POST['userId'], $_POST['itemId'])) {
+                $userId = $_POST['userId'];
+                $itemId = $_POST['itemId'];
+                $controller->equipItem($userId, $itemId);
+                header("Location: ../../usuario/char.php");
+                die();
+            }
+            break;
+
         default:
             header("Location: error.php");
             die();
+
+            
     }
 } else {
     header("Location: error.php");
