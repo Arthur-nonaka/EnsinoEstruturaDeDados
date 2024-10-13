@@ -9,20 +9,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <title>Quiz sobre Lista Simples</title>
+    <title>Quiz sobre Lista Dupla</title>
 </head>
 <body>
 
 <section class="section">
     <div class="container">
-        <h1 class="title has-text-centered">Quiz Lista Simples</h1>
+        <h1 class="title has-text-centered">Quiz Lista Dupla</h1>
         <form method="POST" action="resultado.php">
             <?php
-                $questions = $controller->getQuestions(2);
+                $questions = $controller->getQuestions(3);
                 
                 foreach($questions as $index => $question) {
                     echo "<input type='hidden' name='correct_q$index' value='". $question->getCorrectAnswer(). "'>";        
-                    echo "<input type='hidden' name='aula' value='2'>";        
+                    echo "<input type='hidden' name='aula' value='3'>";        
                     echo "<div class='box'>";
                     echo "<p class='subtitle'>".$question->getQuestion()."</p>";
                     echo "<div class='field'>";

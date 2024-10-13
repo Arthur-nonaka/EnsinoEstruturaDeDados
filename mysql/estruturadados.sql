@@ -3,7 +3,7 @@ CREATE TABLE users (
     name VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL,
-    coins INT(11) NOT NULL
+    coins INT NOT NULL DEFAULT 0
 );
 
 CREATE TABLE items (
@@ -17,8 +17,8 @@ CREATE TABLE users_items (
     users_id INT,
     items_id INT,
     PRIMARY KEY (users_id, items_id),
-    FOREIGN KEY (users_id) REFERENCES users(id),
-    FOREIGN KEY (items_id) REFERENCES items(id)
+    FOREIGN KEY (users_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (items_id) REFERENCES items(id) ON DELETE CASCADE
 );
 
 CREATE TABLE class (
@@ -30,8 +30,8 @@ CREATE TABLE users_class (
     users_id INT,
     class_id INT,
     PRIMARY KEY (users_id, class_id),
-    FOREIGN KEY (users_id) REFERENCES users(id),
-    FOREIGN KEY (class_id) REFERENCES class(id)
+    FOREIGN KEY (users_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (class_id) REFERENCES class(id) ON DELETE CASCADE
 );
 
 CREATE TABLE questions (
@@ -42,11 +42,17 @@ CREATE TABLE questions (
     b VARCHAR(255) NOT NULL,
     c VARCHAR(255) NOT NULL,
     d VARCHAR(255) NOT NULL,
-    correct VARCHAR(1) NOT NULL,
-    FOREIGN KEY (class_id) REFERENCES class(id)
+    correct CHAR(1) NOT NULL,
+    FOREIGN KEY (class_id) REFERENCES class(id) ON DELETE CASCADE
 );
 
-INSERT INTO class (name) VALUES ('TAD'), ('Lista Simples'), ('Lista Dupla'), ('Fila'), ('Fila Prioridade'), ('Pilha');
+INSERT INTO class (name) VALUES 
+('TAD'), 
+('Lista Simples'), 
+('Lista Dupla'), 
+('Fila'), 
+('Fila Prioridade'), 
+('Pilha');
 
 INSERT INTO questions (question, a, b, c, d, correct, class_id) VALUES
 ('O que é um Tipo Abstrato de Dados (TAD)?', 'Um conceito na programação', 'Um tipo de dado primitivo', 'Uma linguagem de programação', 'Um algoritmo', 'A', 1),
@@ -83,16 +89,16 @@ INSERT INTO questions (question, a, b, c, d, correct, class_id) VALUES
 ('Como é feita a busca em uma Lista Dupla?', 'Busca binária', 'Busca linear', 'Busca em profundidade', 'Busca em largura', 'B', 3);
 
 INSERT INTO questions (question, a, b, c, d, correct, class_id) VALUES
-('O que é uma Fila?', 'Uma estrutura de dados linear', 'Um tipo de variável', 'Um tipo de constante', 'Um tipo de função', 'A',4),
-('Qual é a principal característica de uma Fila?', 'Primeiro a entrar, primeiro a sair (FIFO)', 'Último a entrar, primeiro a sair (LIFO)', 'Primeiro a entrar, último a sair (FILO)', 'Último a entrar, último a sair (LILO)', 'A',4),
-('Como é feita a inserção em uma Fila?', 'Inserindo no início', 'Inserindo no meio', 'Inserindo no final', 'Inserindo em qualquer posição', 'C',4),
-('Como é feita a remoção em uma Fila?', 'Removendo do início', 'Removendo do meio', 'Removendo do final', 'Removendo de qualquer posição', 'A',4),
-('Qual é a complexidade de tempo para acessar um elemento em uma Fila?', 'O(1)', 'O(log n)', 'O(n)', 'O(n^2)', 'C',4),
-('Qual é a vantagem de usar uma Fila?', 'Fácil de implementar', 'Fácil de acessar elementos', 'Fácil de ordenar', 'Fácil de inserir e remover elementos', 'D',4),
-('Qual é a desvantagem de usar uma Fila?', 'Difícil de implementar', 'Difícil de acessar elementos', 'Difícil de ordenar', 'Difícil de inserir e remover elementos', 'B',4),
-('Como é representada uma Fila?', 'Como um array', 'Como uma matriz', 'Como uma árvore', 'Como uma sequência de nós', 'D',4),
-('Qual é a diferença entre uma Fila e uma Pilha?', 'Fila é FIFO', 'Pilha é LIFO', 'Fila é LIFO', 'Pilha é FIFO', 'A',4),
-('Como é feita a busca em uma Fila?', 'Busca binária', 'Busca linear', 'Busca em profundidade', 'Busca em largura', 'B',4);
+('O que é uma Fila?', 'Uma estrutura de dados linear', 'Um tipo de variável', 'Um tipo de constante', 'Um tipo de função', 'A', 4),
+('Qual é a principal característica de uma Fila?', 'Primeiro a entrar, primeiro a sair (FIFO)', 'Último a entrar, primeiro a sair (LIFO)', 'Primeiro a entrar, último a sair (FILO)', 'Último a entrar, último a sair (LILO)', 'A', 4),
+('Como é feita a inserção em uma Fila?', 'Inserindo no início', 'Inserindo no meio', 'Inserindo no final', 'Inserindo em qualquer posição', 'C', 4),
+('Como é feita a remoção em uma Fila?', 'Removendo do início', 'Removendo do meio', 'Removendo do final', 'Removendo de qualquer posição', 'A', 4),
+('Qual é a complexidade de tempo para acessar um elemento em uma Fila?', 'O(1)', 'O(log n)', 'O(n)', 'O(n^2)', 'C', 4),
+('Qual é a vantagem de usar uma Fila?', 'Fácil de implementar', 'Fácil de acessar elementos', 'Fácil de ordenar', 'Fácil de inserir e remover elementos', 'D', 4),
+('Qual é a desvantagem de usar uma Fila?', 'Difícil de implementar', 'Difícil de acessar elementos', 'Difícil de ordenar', 'Difícil de inserir e remover elementos', 'B', 4),
+('Como é representada uma Fila?', 'Como um array', 'Como uma matriz', 'Como uma árvore', 'Como uma sequência de nós', 'D', 4),
+('Qual é a diferença entre uma Fila e uma Pilha?', 'Fila é FIFO', 'Pilha é LIFO', 'Fila é LIFO', 'Pilha é FIFO', 'A', 4),
+('Como é feita a busca em uma Fila?', 'Busca binária', 'Busca linear', 'Busca em profundidade', 'Busca em largura', 'B', 4);
 
 INSERT INTO questions (question, a, b, c, d, correct, class_id) VALUES
 ('O que é uma Fila de Prioridade?', 'Uma estrutura de dados onde cada elemento tem uma prioridade', 'Uma estrutura de dados linear', 'Um tipo de variável', 'Um tipo de constante', 'A', 5),

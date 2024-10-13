@@ -58,10 +58,18 @@ class Controller
         $this->database->updateUser($user, $id);
     }
 
+    public function hasPassedClass($id, $class)
+    {
+        $result = $this->database->getUserById($id);
+        $classes = $this->database->getClassesByUserId($id);
+        $user = new User($result['name'], $result['password'], $result['email'], $result['coins'], $classes);
+        return in_array($class, $user->getClasses());
+    }
+
     public function gainMoney($amount, $id)
     {
         $result = $this->database->getUserById($id);
-        $user = new User($result['name'], $result['password'], $result['email'], $result['coins']);
+        $user = new User($result['name'], $result['password'], $result['email'], $result['coins'], null);
         $user->setCoins($user->getCoins() + $amount);
         $this->database->updateUser($user, $id);
     }

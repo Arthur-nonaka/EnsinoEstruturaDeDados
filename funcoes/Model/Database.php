@@ -25,7 +25,7 @@ class Database
         $conn = $this->connect();
         $sql = "INSERT INTO users (name, password, email, coins) VALUES ('" . $user->getName() . "', '" . $user->getPassword() . "', '" . $user->getEmail() . "', " . $user->getCoins() . ")";
         if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully";
+            // echo "New record created successfully";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
@@ -86,7 +86,7 @@ class Database
         $conn = $this->connect();
         $sql = "UPDATE users SET name = '" . $user->getName() . "', password = '" . $user->getPassword() . "', email = '" . $user->getEmail() . "', coins = " . $user->getCoins() . " WHERE id = " . $id;
         if ($conn->query($sql) === TRUE) {
-            echo "Record updated successfully";
+            // echo "Record updated successfully";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
@@ -102,7 +102,7 @@ class Database
         $conn = $this->connect();
         $sql = "DELETE FROM users_class WHERE users_id = " . $id;
         if ($conn->query($sql) === TRUE) {
-            echo "Record deleted successfully";
+            // echo "Record deleted successfully";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
@@ -116,7 +116,7 @@ class Database
         $add = rtrim($add, ',');
         $sql = "INSERT INTO users_class (users_id, class_id) VALUES " . $add;
         if ($conn->query($sql) === TRUE) {
-            echo "Record updated successfully";
+            // echo "Record updated successfully";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
@@ -128,7 +128,7 @@ class Database
         $this->deleteClassUser($id);
         $sql = "DELETE FROM users WHERE id = " . $id;
         if ($conn->query($sql) === TRUE) {
-            echo "Record deleted successfully";
+            // echo "Record deleted successfully";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

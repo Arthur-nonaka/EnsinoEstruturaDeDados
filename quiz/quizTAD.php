@@ -16,11 +16,13 @@
 <section class="section">
     <div class="container">
         <h1 class="title has-text-centered">Quiz TAD</h1>
-        <form method="POST" action="resultadoArrey.php">
+        <form method="POST" action="resultado.php">
             <?php
                 $questions = $controller->getQuestions(1);
-
+                
                 foreach($questions as $index => $question) {
+                    echo "<input type='hidden' name='correct_q$index' value='". $question->getCorrectAnswer(). "'>";        
+                    echo "<input type='hidden' name='aula' value='1'>";        
                     echo "<div class='box'>";
                     echo "<p class='subtitle'>".$question->getQuestion()."</p>";
                     echo "<div class='field'>";

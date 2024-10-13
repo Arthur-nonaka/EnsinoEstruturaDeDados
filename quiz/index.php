@@ -4,6 +4,10 @@ if (!isset($_SESSION['user'])) {
     header("Location: ./");
     die();
 }
+
+require_once "../funcoes/Controller/Controller.php";
+$controller = new Controller();
+$id = $_SESSION['id'];
 ?>
 
 <!DOCTYPE html>
@@ -43,13 +47,16 @@ if (!isset($_SESSION['user'])) {
             margin-top:8vh;
         }
         /* Position buttons at specific points */
-        .button1 { left: 50%; top: 10%; }
-        .button2 { left: 30%; top: 40%; }
-        .button3 { left: 70%; top: 95%; }
+        .button1 { left: 50%; top: 5%; }
+        .button2 { left: 30%; top: 15%; }
+        .button3 { left: 68%; top: 38%; }
+        .button4 { left: 50%; top: 47%; }
+        .button5 { left: 60%; top: 60%; }
+        .button6 { left: 40%; top: 80%; }
         
         svg {
             width: 100%;
-            height: 50%;
+            height: 300%;
         }
 
         .polyline {
@@ -77,11 +84,38 @@ if (!isset($_SESSION['user'])) {
                 </div>
                 <div class="button-container">
                     
-                    <a href="./quizTAD.php" class="button buttonpath button1">TAD</a>
-                    <a href="./quizListaSimples.php" class="button buttonpath button2 blocked">Lista Simples</a>
-                    <a href="path3.html" class="button buttonpath button3">Lista Dupla</a>
-                    <svg viewBox="0 0 300 120" preserveAspectRatio="xMaxyMin">
-                        <polyline points="150,15 110,25 85,45 110,90 150,107 200,115" class="polyline" />
+                <a href="./quizTAD.php" class="button buttonpath button1">TAD</a>
+                <?php if ($controller->hasPassedClass($id, 1)): ?>
+                    <a href="./quizListaSimples.php" class="button buttonpath button2">Lista Simples</a>
+                <?php else: ?>
+                    <a href="#" class="button buttonpath button2 blocked">Lista Simples</a>
+                <?php endif; ?>
+                
+                <?php if ($controller->hasPassedClass($id, 2)): ?>
+                    <a href="./quizListaDupla.php" class="button buttonpath button3">Lista Dupla</a>
+                <?php else: ?>
+                    <a href="#" class="button buttonpath button3 blocked">Lista Dupla</a>
+                <?php endif; ?>
+                
+                <?php if ($controller->hasPassedClass($id, 3)): ?>
+                    <a href="./quizFila.php" class="button buttonpath button4">Fila</a>
+                <?php else: ?>
+                    <a href="#" class="button buttonpath button4 blocked">Fila</a>
+                <?php endif; ?>
+                
+                <?php if ($controller->hasPassedClass($id, 4)): ?>
+                    <a href="./quizFilaPrioridade.php" class="button buttonpath button5">Fila Prioridade</a>
+                <?php else: ?>
+                    <a href="#" class="button buttonpath button5 blocked">Fila Prioridade</a>
+                <?php endif; ?>
+                
+                <?php if ($controller->hasPassedClass($id, 5)): ?>
+                    <a href="./quizPilha.php" class="button buttonpath button6">Pilha</a>
+                <?php else: ?>
+                    <a href="#" class="button buttonpath button6 blocked">Pilha</a>
+                <?php endif; ?>
+                    <svg viewBox="0 0 300 300" preserveAspectRatio="xMaxyMin">
+                        <polyline points="150,15 110,25 85,45 110,90 150,107 200,115 150,140 180,180 120,240" class="polyline" />
                     </svg>
                 </div>
                 </section>
@@ -91,6 +125,7 @@ if (!isset($_SESSION['user'])) {
     <script src="../scripts.js"></script>
 
     <?php require '../componentes/footer.php'; ?>
+    
 </body>
 
 </html>
