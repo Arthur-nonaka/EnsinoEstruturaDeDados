@@ -70,8 +70,8 @@ if (!isset($_SESSION['user'])) {
         </section>
         <section class="section is-flex is-justify-content-space-between">
 
-            <a class="is-size-5 has-text-link anterior" href="../../home.php"> Anterior </a>
-            <a class="is-size-5 has-text-link proximo" href="Operacoes.php"> Proximo </a>
+            <a class="is-size-5 has-text-link anterior" href="Operacoes.php"> Anterior </a>
+            <a class="is-size-5 has-text-link proximo" href="../PilhaLIFO/Pilha.php"> Proximo </a>
 
         </section>
     </main>

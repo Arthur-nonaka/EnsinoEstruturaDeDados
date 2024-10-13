@@ -85,16 +85,6 @@ if (!isset($_SESSION['user'])) {
                     <button class="button is-info is-dark quiz">QUIZ !!</button>
                 </a>
             </div>
-            <form method="POST" action="./funcoes/Process/Process.php">
-                <input type="hidden" name="action" value="completeClass">
-                <input type="hidden" name="id" value="<?php Echo $_SESSION['id']?>">
-                <input type="hidden" name="class" value="2">
-                <div class="buttons are-large p-2 mb-5">
-                    <a href="./quiz">
-                        <input class="button is-info is-dark quiz" type="submit">
-                    </a>
-                </div>
-            </form>
         </div>
     </main>
 

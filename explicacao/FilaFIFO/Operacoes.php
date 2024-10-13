@@ -166,7 +166,7 @@ if (!isset($_SESSION['user'])) {
 
         <section class="section is-flex is-justify-content-space-between">
 
-            <a class="is-size-5 has-text-link anterior" href="Lista.php"> Anterior </a>
+            <a class="is-size-5 has-text-link anterior" href="Fila.php"> Anterior </a>
             <a class="is-size-5 has-text-link proximo" href="Exemplo.php"> Proximo </a>
 
         </section>

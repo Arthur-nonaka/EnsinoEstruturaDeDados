@@ -38,11 +38,11 @@ if (!isset($_SESSION['user'])) {
         <h2 class="subtitle has-text-black-bis"> Vamos as operações: </h2>
             </section>
         </section>
-        <section class="section is-flex is-justify-content-end">
-
+        <section class="section is-flex is-justify-content-space-between">
+            <a class="is-size-5 has-text-link anterior" href="../FilaPrioridade/Exemplo.php"> Anterior </a>
             <a class="is-size-5 has-text-link proximo" href="Operacoes.php"> Proximo </a>
 
-        </section>
+            </section>
     </main>
 
     <?php require '../../componentes/footer.php'; ?>
