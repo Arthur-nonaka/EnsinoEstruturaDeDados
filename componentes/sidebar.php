@@ -22,6 +22,15 @@
     <a href="/ensinoestruturadedados/explicacao/PilhaLIFO/Pilha.php" class="sidebar-item sidebar-link" data-page="Pilha-LIFO">Pilha LIFO</a>
     <a href="/ensinoestruturadedados/explicacao/PilhaLIFO/Operacoes.php" class="sidebar-subitem sidebar-link" data-page="Pilha-LIFO-Operacoes">Operações</a>
     <a href="/ensinoestruturadedados/explicacao/PilhaLIFO/Exemplo.php" class="sidebar-subitem sidebar-link" data-page="Pilha-LIFO-Exemplo">Exemplos</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreBusca/Busca.php" class="sidebar-item sidebar-link" data-page="ArvoreBusca">Árvore Binária de Busca</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreBusca/Operacoes.php" class="sidebar-subitem sidebar-link" data-page="ArvoreBusca-Operacoes">Operações</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreBusca/Exemplo.php" class="sidebar-subitem sidebar-link" data-page="ArvoreBusca-Exemplo">Exemplos</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreB/B.php" class="sidebar-item sidebar-link" data-page="ArvoreB">Árvore B</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreB/Operacoes.php" class="sidebar-subitem sidebar-link" data-page="ArvoreB">Operações</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreB/Exemplo.php" class="sidebar-subitem sidebar-link" data-page="ArvoreB">Exemplos</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreBusca/Trie.php" class="sidebar-item sidebar-link" data-page="ArvoreTrie">Árvore Trie</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreBusca/Operacoes.php" class="sidebar-subitem sidebar-link" data-page="ArvoreTrie-Operacoes">Operações</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreBusca/Exemplo.php" class="sidebar-subitem sidebar-link" data-page="ArvoreTrie-Exemplo">Exemplos</a>
   </div>
 </div>
 
