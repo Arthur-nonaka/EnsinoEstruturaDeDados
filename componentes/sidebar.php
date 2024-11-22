@@ -34,7 +34,7 @@
     <a href="/ensinoestruturadedados/explicacao/ArvoreAVL/AVL.php" class="sidebar-item sidebar-link" data-page="ArvoreAVL">Árvore AVL</a>
     <a href="/ensinoestruturadedados/explicacao/ArvoreAVL/Operacoes.php" class="sidebar-subitem sidebar-link" data-page="ArvoreAVL-Operacoes">Operações</a>
     <a href="/ensinoestruturadedados/explicacao/ArvoreAVL/Exemplo.php" class="sidebar-subitem sidebar-link" data-page="ArvoreAVL-Exemplo">Exemplos</a>
-    <a href="/ensinoestruturadedados/explicacao/ArvoreRubroNegra/RubroNegra.php" class="sidebar-item sidebar-link" data-page="ArvoreRubroNegra">Árvore Trie</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreRubroNegra/RubroNegra.php" class="sidebar-item sidebar-link" data-page="ArvoreRubroNegra">Árvore Rubro Negra</a>
     <a href="/ensinoestruturadedados/explicacao/ArvoreRubroNegra/Operacoes.php" class="sidebar-subitem sidebar-link" data-page="ArvoreRubroNegra-Operacoes">Operações</a>
     <a href="/ensinoestruturadedados/explicacao/ArvoreRubroNegra/Exemplo.php" class="sidebar-subitem sidebar-link" data-page="ArvoreRubroNegra-Exemplo">Exemplos</a>
   </div>
