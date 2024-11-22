@@ -8,8 +8,9 @@ class Question
     private $optionC;
     private $optionD;
     private $correctAnswer;
+    private $tip;
 
-    public function __construct($question, $optionA, $optionB, $optionC, $optionD, $correctAnswer)
+    public function __construct($question, $optionA, $optionB, $optionC, $optionD, $correctAnswer, $tip)
     {
         $this->question = $question;
         $this->optionA = $optionA;
@@ -17,6 +18,7 @@ class Question
         $this->optionC = $optionC;
         $this->optionD = $optionD;
         $this->correctAnswer = $correctAnswer;
+        $this->tip = $tip;
     }
 
     public function getQuestion()
@@ -47,6 +49,15 @@ class Question
     public function getCorrectAnswer()
     {
         return $this->correctAnswer;
+    }
+
+    public function getTip()
+    {
+        return $this->tip;
+    }
+
+    public function setTip($tip) {
+        $this->tip = $tip;
     }
     public function setQuestion($question)
     {

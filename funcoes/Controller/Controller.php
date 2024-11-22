@@ -104,11 +104,31 @@ class Controller
         $result = $this->database->getQuestions($classId);
         $questions = [];
         while ($row = $result->fetch_assoc()) {
-            $questions[] = new Question($row['question'], $row['a'], $row['b'], $row['c'], $row['d'], $row['correct']);
+            $questions[] = new Question($row['question'], $row['a'], $row['b'], $row['c'], $row['d'], $row['correct'], $row['tip']);
         }
 
         if (count($questions) > 3) {
-            $randomKeys = array_rand($questions, 3);
+            $randomKeys = array_rand($questions, 4);
+            $randomQuestions = [];
+            foreach ($randomKeys as $key) {
+                $randomQuestions[] = $questions[$key];
+            }
+            return $randomQuestions;
+        }
+
+        return $questions;
+    }
+
+    public function getNewQuestion($classId)
+    {
+        $result = $this->database->getQuestions($classId);
+        $questions = [];
+        while ($row = $result->fetch_assoc()) {
+            $questions[] = new Question($row['question'], $row['a'], $row['b'], $row['c'], $row['d'], $row['correct'],$row['tip']);
+        }
+
+        if (count($questions) > 1) {
+            $randomKeys = array_rand($questions, 1);
             $randomQuestions = [];
             foreach ($randomKeys as $key) {
                 $randomQuestions[] = $questions[$key];

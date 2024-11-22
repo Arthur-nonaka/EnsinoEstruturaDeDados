@@ -54,7 +54,7 @@ class Database
 
     public function getUserItems($id) {
         $conn = $this->connect();
-        $sql = "SELECT items.id, items.name, items.path, users_items.eqquiped, items.type
+        $sql = "SELECT items.id, items.name, items.path, users_items.eqquiped, items.type, items.bonus, items.amount
             FROM users_items 
             JOIN items ON users_items.items_id = items.id 
             WHERE users_items.users_id = " . $id;

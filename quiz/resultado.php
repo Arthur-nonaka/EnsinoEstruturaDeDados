@@ -19,6 +19,7 @@
         <h1 class="title has-text-centered">Resultado do Quiz</h1>
 
         <?php
+        $money = 0;
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $correctAnswers = 0;
             $totalQuestions = 0;
@@ -33,7 +34,9 @@
                 }
             }
 
-            echo "<div class='notification is-primary has-text-centered' style='background-color: #66D1FF'>Você acertou $correctAnswers de $totalQuestions perguntas, ganhou " . $correctAnswers * 10 . " moedas!</div>";
+            $money = ($correctAnswers * 10) * (($_POST['money']/100) + 1);
+
+            echo "<div class='notification is-primary has-text-centered' style='background-color: #66D1FF'>Você acertou $correctAnswers de $totalQuestions perguntas, ganhou " . $money . " moedas!</div>";
             echo "<div class='notification is-primary has-text-centered' style='background-color: #66D1FF'>";
             if ($correctAnswers === $totalQuestions) {
                 echo "Parabéns! Você é um expert! Liberou a próxima aula.";
@@ -57,7 +60,7 @@
 </html>
 
 <?php
-    $controller->gainMoney($correctAnswers * 10, $_SESSION['id']);
+    $controller->gainMoney($money, $_SESSION['id']);
     if($correctAnswers === $totalQuestions) {
         $controller->completeClass($_SESSION['id'], $_POST['aula']);
     }
