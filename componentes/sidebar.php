@@ -28,9 +28,15 @@
     <a href="/ensinoestruturadedados/explicacao/ArvoreB/B.php" class="sidebar-item sidebar-link" data-page="ArvoreB">Árvore B</a>
     <a href="/ensinoestruturadedados/explicacao/ArvoreB/Operacoes.php" class="sidebar-subitem sidebar-link" data-page="ArvoreB">Operações</a>
     <a href="/ensinoestruturadedados/explicacao/ArvoreB/Exemplo.php" class="sidebar-subitem sidebar-link" data-page="ArvoreB">Exemplos</a>
-    <a href="/ensinoestruturadedados/explicacao/ArvoreBusca/Trie.php" class="sidebar-item sidebar-link" data-page="ArvoreTrie">Árvore Trie</a>
-    <a href="/ensinoestruturadedados/explicacao/ArvoreBusca/Operacoes.php" class="sidebar-subitem sidebar-link" data-page="ArvoreTrie-Operacoes">Operações</a>
-    <a href="/ensinoestruturadedados/explicacao/ArvoreBusca/Exemplo.php" class="sidebar-subitem sidebar-link" data-page="ArvoreTrie-Exemplo">Exemplos</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreTrie/Trie.php" class="sidebar-item sidebar-link" data-page="ArvoreTrie">Árvore Trie</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreTrie/Operacoes.php" class="sidebar-subitem sidebar-link" data-page="ArvoreTrie-Operacoes">Operações</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreTrie/Exemplo.php" class="sidebar-subitem sidebar-link" data-page="ArvoreTrie-Exemplo">Exemplos</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreAVL/AVL.php" class="sidebar-item sidebar-link" data-page="ArvoreAVL">Árvore AVL</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreAVL/Operacoes.php" class="sidebar-subitem sidebar-link" data-page="ArvoreAVL-Operacoes">Operações</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreAVL/Exemplo.php" class="sidebar-subitem sidebar-link" data-page="ArvoreAVL-Exemplo">Exemplos</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreRubroNegra/RubroNegra.php" class="sidebar-item sidebar-link" data-page="ArvoreRubroNegra">Árvore Trie</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreRubroNegra/Operacoes.php" class="sidebar-subitem sidebar-link" data-page="ArvoreRubroNegra-Operacoes">Operações</a>
+    <a href="/ensinoestruturadedados/explicacao/ArvoreRubroNegra/Exemplo.php" class="sidebar-subitem sidebar-link" data-page="ArvoreRubroNegra-Exemplo">Exemplos</a>
   </div>
 </div>
 
