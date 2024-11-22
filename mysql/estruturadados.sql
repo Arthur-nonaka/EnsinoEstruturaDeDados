@@ -47,6 +47,7 @@ CREATE TABLE questions (
     c VARCHAR(255) NOT NULL,
     d VARCHAR(255) NOT NULL,
     correct CHAR(1) NOT NULL,
+    tip VARCHAR(255) NOT NULL,
     FOREIGN KEY (class_id) REFERENCES class(id) ON DELETE CASCADE
 );
 
